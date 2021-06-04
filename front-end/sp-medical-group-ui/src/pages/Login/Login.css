@@ -1,0 +1,149 @@
+:root {
+  --text: #3e4954;
+  --blue: #007fa3;
+}
+
+.login__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.login__left-content {
+  width: 65vw;
+  /* min-width: 640px; */
+  height: 100vh;
+  background-image: url(../../img/login-background.svg);
+  /* background-image: url(../../img/doctors.svg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px 0 15px;
+  overflow: hidden;
+}
+
+/* .login__img-background-top {
+  width: 100vw;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(../../img/login-background-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+} */
+
+.login__doctor-img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__left-content {
+    display: none;
+  }
+
+  .login__container {
+    overflow: auto;
+  }
+
+  .login__right-content {
+    height: 100vh;
+  }
+
+  .login__logo-container {
+    padding-top: 100px;
+  }
+
+  /* .login__img-background-top {
+    display: flex;
+  } */
+}
+
+@media only screen and (max-height: 600px) {
+  .login__left-content {
+    display: none;
+  }
+
+  .login__container {
+    overflow: auto;
+  }
+
+  .login__logo-container {
+    padding-top: 100px;
+  }
+}
+
+.login__right-content {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.login__logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__logo-container img {
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.login__form-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: #215a58;
+}
+
+.login__form-label {
+  font-size: 16px;
+  color: #215a58;
+  margin: 20px 0 6px 0;
+}
+
+.login__form-input {
+  height: 48px;
+  border: 1px solid #215a58;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.login__form-input:focus {
+  outline-color: var(--blue);
+}
+
+.login__form-btn {
+  width: 105px;
+  height: 40px;
+  align-self: flex-start;
+  margin: 40px 0;
+  border-radius: 6px;
+  border: unset;
+  outline: unset;
+  cursor: pointer;
+  background-color: #007fa3;
+  color: #fff;
+}
