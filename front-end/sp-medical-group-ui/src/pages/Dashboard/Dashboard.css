@@ -1,0 +1,12 @@
+body {
+  background-color: #f3f5f5;
+}
+
+.dashboard__container {
+  display: flex;
+}
+
+.dashboard__body {
+  width: 100vw;
+  height: 100vh;
+}
