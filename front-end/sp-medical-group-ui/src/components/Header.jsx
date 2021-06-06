@@ -1,8 +1,10 @@
+//Libs
 import React from 'react';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 import { FaUserShield } from 'react-icons/fa';
 // import { GoThreeBars } from 'react-icons/go';
 
+//Styles
 import '../styles/components/Header.css';
 
 const Header = ({ username, showSidebar, setShowSidebar }) => {

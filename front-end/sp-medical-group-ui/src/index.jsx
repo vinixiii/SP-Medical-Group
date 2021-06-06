@@ -1,3 +1,4 @@
+//Libs
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
@@ -7,13 +8,13 @@ import {
   Redirect,
 } from 'react-router-dom';
 
+//Styles
 import './styles/index.css';
 
+//Pages
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-
-import reportWebVitals from './reportWebVitals';
 
 export const routing = (
   <Router>
@@ -36,8 +37,3 @@ export const routing = (
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

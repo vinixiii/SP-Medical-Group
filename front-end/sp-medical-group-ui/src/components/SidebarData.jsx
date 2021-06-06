@@ -1,5 +1,7 @@
+//Libs
 import React from 'react';
 import { RiDashboardLine, RiStethoscopeFill } from 'react-icons/ri';
+import { FiLogOut } from 'react-icons/fi';
 import {
   FaUsers,
   FaUserShield,
@@ -49,6 +51,11 @@ const SidebarData = [
     title: 'Especialidades',
     icon: <RiStethoscopeFill />,
     link: '/especialidades',
+  },
+  {
+    title: 'Sair',
+    icon: <FiLogOut />,
+    link: '',
   },
 ];
 
