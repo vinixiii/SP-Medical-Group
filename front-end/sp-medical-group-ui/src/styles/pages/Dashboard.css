@@ -1,0 +1,26 @@
+/* Global ========= */
+:root {
+  --primary-color: #215a58;
+  --secondary-color: #007fa3;
+  --third-color: #e8efef;
+  --title: #3f3d56;
+  --text: #3e4954;
+  --option: #878787;
+  --background: #f3f5f5;
+}
+
+.dashboard__container {
+  background-color: var(--background);
+  display: flex;
+}
+
+.dashboard__body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dashboard__main {
+  width: 96%;
+  height: auto;
+  margin: 78px auto 0;
+}

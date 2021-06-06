@@ -7,11 +7,11 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import './index.css';
+import './styles/index.css';
 
-import Dashboard from './pages/Dashboard/Dashboard';
-import Login from './pages/Login/Login';
-import NotFound from './pages/NotFound/NotFound';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
 import reportWebVitals from './reportWebVitals';
 
