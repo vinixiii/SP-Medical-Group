@@ -1,0 +1,33 @@
+/* Global ========= */
+:root {
+  --primary-color: #215a58;
+  --secondary-color: #007fa3;
+  --primary-btn-hover: #296d6b;
+  --secondary-btn-hover: #0290b8;
+  --third-color: #e8efef;
+  --title: #3f3d56;
+  --text: #3e4954;
+  --option: #878787;
+  --background: #f3f5f5;
+  --table-row-background: #fafbfb;
+  --white-background: #ffffff;
+  --input-border: #dfe1e5;
+  --delete-red: #ea4747;
+}
+
+/* Button ========= */
+.btn__btn {
+  height: 40px;
+  background-color: var(--primary-color);
+  padding: 0 20px;
+  color: var(--white-background);
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn__btn:hover {
+  background-color: var(--primary-btn-hover);
+}
