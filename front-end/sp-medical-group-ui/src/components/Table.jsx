@@ -4,7 +4,7 @@ import { FiEdit, FiTrash } from 'react-icons/fi';
 
 import '../styles/components/Table.css';
 
-const Table = ({ columns, data }) => {
+const Table = ({ columns, data, role }) => {
   const mappedData = data.map((item, index) => {
     const items = [];
     let i = 0;
@@ -43,10 +43,12 @@ const Table = ({ columns, data }) => {
             </span>
           </td>
         ))}
-        <td className="table__icons">
-          <FiEdit className="table__edit-icon" />
-          <FiTrash className="table__delete-icon" />
-        </td>
+        {role === 'admin' && (
+          <td className="table__icons">
+            <FiEdit className="table__edit-icon" />
+            <FiTrash className="table__delete-icon" />
+          </td>
+        )}
       </tr>
     );
   });
@@ -59,7 +61,7 @@ const Table = ({ columns, data }) => {
             {columns.map((column, index) => (
               <th key={index}>{column}</th>
             ))}
-            <th>Ações</th>
+            {role === 'admin' && <th>Ações</th>}
           </tr>
         </thead>
         <tbody>{mappedData}</tbody>

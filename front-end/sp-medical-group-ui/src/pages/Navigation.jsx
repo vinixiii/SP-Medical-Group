@@ -12,6 +12,7 @@ import Sidebar from '../components/Sidebar';
 //Pages
 import Dashboard from '../pages/Dashboard';
 import Users from '../pages/Users';
+import Appointments from '../pages/Appointments';
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -30,6 +31,7 @@ const Navigation = () => {
           <main className="navigation__main">
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/usuarios" component={Users} />
+            <Route path="/consultas" component={Appointments} />
           </main>
         </div>
       </Router>
