@@ -7,7 +7,7 @@ import {
   FaUserShield,
   FaUserMd,
   FaUserPlus,
-  FaFileMedical,
+  FaNotesMedical,
   FaHospital,
 } from 'react-icons/fa';
 
@@ -39,7 +39,7 @@ const SidebarData = [
   },
   {
     title: 'Consultas',
-    icon: <FaFileMedical />,
+    icon: <FaNotesMedical />,
     link: '/consultas',
   },
   {

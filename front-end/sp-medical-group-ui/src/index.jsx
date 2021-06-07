@@ -12,8 +12,8 @@ import {
 import './styles/index.css';
 
 //Pages
-import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
 
 export const routing = (

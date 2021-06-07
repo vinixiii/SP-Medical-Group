@@ -7,7 +7,7 @@ import '../styles/pages/Dashboard.css';
 //Components
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import Home from '../pages/Home';
+import Users from '../pages/Users';
 
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -16,7 +16,7 @@ const Dashboard = () => {
     <div className="dashboard__container">
       <Router>
         <Sidebar showSidebar={showSidebar} />
-        <div className="dashboard__body">
+        <div className="dashboard__content">
           <Header
             username={'Admin'}
             showSidebar={showSidebar}
@@ -24,7 +24,7 @@ const Dashboard = () => {
           />
 
           <main className="dashboard__main">
-            <Route path="/usuarios" component={Home} />
+            <Route path="/usuarios" component={Users} />
           </main>
         </div>
       </Router>

@@ -1,0 +1,116 @@
+/* Global ========= */
+:root {
+  --primary-color: #215a58;
+  --secondary-color: #007fa3;
+  --third-color: #e8efef;
+  --title: #3f3d56;
+  --text: #3e4954;
+  --option: #878787;
+  --background: #f3f5f5;
+  --table-row-background: #fafbfb;
+  --white-background: #ffffff;
+  --input-border: #dfe1e5;
+  --delete-red: #ea4747;
+}
+
+/* Table ========= */
+.table__container {
+  max-width: 100%;
+  height: 450px;
+  margin-top: 36px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.table__data-table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 0 10px;
+}
+
+.table__data-table thead {
+  font-size: 16px;
+  position: sticky;
+  color: var(--title);
+  background-color: var(--white-background);
+}
+
+.table__data-table tbody {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.table__data-table th,
+.table__data-table td {
+  font-weight: 400;
+  padding: 20px 10px;
+}
+
+.table__data-table th:first-child,
+.table__data-table td:first-child {
+  padding-left: 20px;
+}
+
+.table__data-table th:last-child,
+.table__data-table td:last-child {
+  padding-right: 20px;
+}
+
+.table__data-table tbody tr {
+  background-color: var(--table-row-background);
+  transition: background-color 0.2s;
+}
+
+.table__data-table tbody tr:hover {
+  background-color: var(--white-background);
+}
+
+.table__icons svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.table__edit-icon {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+  margin-right: 20px;
+  padding: 2px;
+}
+
+.table__delete-icon {
+  color: var(--delete-red);
+  border: 1px solid var(--delete-red);
+  border-radius: 3px;
+  margin-right: 20px;
+  padding: 2px;
+}
+
+.table__edit-icon:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-background);
+}
+
+.table__delete-icon:hover {
+  background-color: var(--delete-red);
+  color: var(--white-background);
+}
+
+/* Border Radius ========= */
+.table__data-table tr th:first-child {
+  border-radius: 6px 0 0 0;
+}
+
+.table__data-table tr th:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+.table__data-table tr:last-child td:first-child {
+  border-radius: 0 0 0 6px;
+}
+
+.table__data-table tr:last-child td:last-child {
+  border-radius: 0 0 6px 0;
+}

@@ -7,7 +7,10 @@
   --text: #3e4954;
   --option: #878787;
   --background: #f3f5f5;
+  --table-row-background: #fafbfb;
+  --white-background: #ffffff;
   --input-border: #dfe1e5;
+  --delete-red: #ea4747;
 }
 
 /* Sidebar ========= */
