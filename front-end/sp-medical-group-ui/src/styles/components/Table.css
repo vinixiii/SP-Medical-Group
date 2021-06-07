@@ -16,7 +16,7 @@
 /* Table ========= */
 .table__container {
   max-width: 100%;
-  height: 450px;
+  height: 680px;
   margin-top: 36px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -113,4 +113,48 @@
 
 .table__data-table tr:last-child td:last-child {
   border-radius: 0 0 6px 0;
+}
+
+/* Data Styles ========= */
+
+/* User Types ========= */
+.table__admin-type {
+  background-color: #b8b7d1;
+  color: #44435f;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.table__doctor-type {
+  background-color: #7bc0be;
+  color: #0c5452;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.table__patient-type {
+  background-color: #c7daf5;
+  color: #2b528a;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+/* Status Types ========= */
+.table__scheduled-type {
+  background-color: #f5eea7;
+  color: #8f8414;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.table__fullfield-type {
+  background-color: #7bc0be;
+  color: #0c5452;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.table__canceled-type {
+  background-color: #ffb0b1;
+  color: #be2527;
+  padding: 6px 10px;
+  border-radius: 3px;
 }

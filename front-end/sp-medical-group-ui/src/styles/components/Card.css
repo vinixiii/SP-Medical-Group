@@ -1,0 +1,55 @@
+/* Global ========= */
+:root {
+  --primary-color: #215a58;
+  --secondary-color: #007fa3;
+  --third-color: #e8efef;
+  --title: #3f3d56;
+  --text: #3e4954;
+  --option: #878787;
+  --background: #f3f5f5;
+  --table-row-background: #fafbfb;
+  --white-background: #ffffff;
+  --input-border: #dfe1e5;
+  --delete-red: #ea4747;
+}
+
+/* Card ========= */
+.card__container {
+  width: 300px;
+  height: 140px;
+  background-color: var(--white-background);
+  margin: 36px 20px 36px 0;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__left-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__left-content span {
+  font-size: 48px;
+  color: var(--secondary-color);
+}
+
+.card__left-content h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--title);
+}
+
+.card__container svg {
+  width: 90px;
+  height: 90px;
+  color: var(--primary-color);
+  /* border: 1px solid var(--primary-color);
+  border-radius: 6px; */
+  padding: 8px;
+}

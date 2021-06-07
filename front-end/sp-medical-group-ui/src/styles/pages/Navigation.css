@@ -13,13 +13,18 @@
   --delete-red: #ea4747;
 }
 
-.dashboard__container h1 {
-  font-weight: 400;
-  color: var(--primary-color);
+.navigation__container {
+  background-color: var(--background);
+  display: flex;
 }
 
-.dashboard__content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.navigation__content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.navigation__main {
+  width: 90%;
+  height: auto;
+  margin: 80px auto 0;
 }

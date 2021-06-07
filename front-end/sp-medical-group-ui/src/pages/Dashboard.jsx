@@ -1,34 +1,25 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+//Libs
+import React from 'react';
+import { RiStethoscopeFill } from 'react-icons/ri';
+import { FaUserMd, FaUserPlus, FaHospital } from 'react-icons/fa';
 
 //Styles
 import '../styles/pages/Dashboard.css';
 
 //Components
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import Users from '../pages/Users';
+import Card from '../components/Card';
 
 const Dashboard = () => {
-  const [showSidebar, setShowSidebar] = useState(true);
-
   return (
-    <div className="dashboard__container">
-      <Router>
-        <Sidebar showSidebar={showSidebar} />
-        <div className="dashboard__content">
-          <Header
-            username={'Admin'}
-            showSidebar={showSidebar}
-            setShowSidebar={setShowSidebar}
-          />
-
-          <main className="dashboard__main">
-            <Route path="/usuarios" component={Users} />
-          </main>
-        </div>
-      </Router>
-    </div>
+    <section className="dashboard__container">
+      <h1>Dashboard</h1>
+      <div className="dashboard__content">
+        <Card number="3" title="Médico" icon={<FaUserMd />} />
+        <Card number="3" title="Pacientes" icon={<FaUserPlus />} />
+        <Card number="3" title="Clínicas" icon={<FaHospital />} />
+        <Card number="3" title="Especialidades" icon={<RiStethoscopeFill />} />
+      </div>
+    </section>
   );
 };
 

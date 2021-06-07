@@ -13,7 +13,7 @@ import './styles/index.css';
 
 //Pages
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import Navigation from './pages/Navigation';
 import NotFound from './pages/NotFound';
 
 export const routing = (
@@ -21,14 +21,14 @@ export const routing = (
     <div>
       <Switch>
         <Route exact path="/" component={Login} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/usuarios" component={Dashboard} />
-        <Route exact path="/admin" component={Dashboard} />
-        <Route exact path="/medicos" component={Dashboard} />
-        <Route exact path="/pacientes" component={Dashboard} />
-        <Route exact path="/consultas" component={Dashboard} />
-        <Route exact path="/clinicas" component={Dashboard} />
-        <Route exact path="/especialidades" component={Dashboard} />
+        <Route exact path="/dashboard" component={Navigation} />
+        <Route exact path="/usuarios" component={Navigation} />
+        <Route exact path="/admin" component={Navigation} />
+        <Route exact path="/medicos" component={Navigation} />
+        <Route exact path="/pacientes" component={Navigation} />
+        <Route exact path="/consultas" component={Navigation} />
+        <Route exact path="/clinicas" component={Navigation} />
+        <Route exact path="/especialidades" component={Navigation} />
         <Route exact path="/notfound" component={NotFound} />
         <Redirect to="/notfound" />
       </Switch>

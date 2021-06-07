@@ -20,8 +20,28 @@ const Table = ({ columns, data }) => {
 
     return (
       <tr key={index}>
-        {items.map((item) => (
-          <td>{item.value}</td>
+        {items.map((item, index) => (
+          <td key={index}>
+            <span
+              className={
+                item.value === 'Administrador'
+                  ? 'table__admin-type'
+                  : '' || item.value === 'Médico'
+                  ? 'table__doctor-type'
+                  : '' || item.value === 'Paciente'
+                  ? 'table__patient-type'
+                  : '' || item.value === 'Agendada'
+                  ? 'table__scheduled-type'
+                  : '' || item.value === 'Realizada'
+                  ? 'table__fullfield-type'
+                  : '' || item.value === 'Cancelada'
+                  ? 'table__canceled-type'
+                  : ''
+              }
+            >
+              {item.value}
+            </span>
+          </td>
         ))}
         <td className="table__icons">
           <FiEdit className="table__edit-icon" />
