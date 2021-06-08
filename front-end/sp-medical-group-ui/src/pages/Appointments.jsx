@@ -38,15 +38,17 @@ const data = [
   },
 ];
 
+const role = 'admin';
+
 const Appointments = () => {
   return (
     <div className="appointments__container">
       <div className="appointments__header">
         <h1>Consultas</h1>
-        <Button title="+ Nova consulta" />
+        {role === 'admin' && <Button title="+ Nova consulta" />}
       </div>
       <Table
-        role="admin"
+        role={role}
         data={data}
         columns={[
           'Paciente',

@@ -31,3 +31,11 @@
 .btn__btn:hover {
   background-color: var(--primary-btn-hover);
 }
+
+.btn__btn.blue {
+  background-color: var(--secondary-color);
+}
+
+.btn__btn.blue:hover {
+  background-color: var(--secondary-btn-hover);
+}

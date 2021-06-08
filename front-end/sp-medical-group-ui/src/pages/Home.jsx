@@ -2,21 +2,27 @@
 import React from 'react';
 
 //Styles
-import '../../styles/pages/patient/PatientHome.css';
-import image from '../../img/nurse-background.svg';
+import '../styles/pages/Home.css';
 
 //Components
-import HomeCard from '../../components/HomeCard';
+import HomeCard from '../components/HomeCard';
 
-const PatientDashboard = () => {
+// const role = '';
+const role = '';
+
+const Home = () => {
   return (
-    <section className="patient-home__container">
+    <section
+      className={
+        role === 'patient' ? 'home__container' : 'home__container doctor'
+      }
+    >
       <h1>Olá, Paciente!</h1>
-      <div className="patient-home__content">
-        <div className="patient-home__left-content">
+      <div className="home__content">
+        <div className="home__left-content">
           <h2>Consultas agendadas</h2>
           <HomeCard
-            role="patient"
+            role={role}
             date="Segunda-feira, 07 de Junho"
             name="Roberto Possarle"
             specialty="Psiquiatra"
@@ -24,7 +30,7 @@ const PatientDashboard = () => {
             status="Agendada"
           />
           <HomeCard
-            role="patient"
+            role={role}
             date="Segunda-feira, 07 de Junho"
             name="Roberto Possarle"
             specialty="Psiquiatra"
@@ -37,4 +43,4 @@ const PatientDashboard = () => {
   );
 };
 
-export default PatientDashboard;
+export default Home;

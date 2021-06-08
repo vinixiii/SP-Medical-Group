@@ -14,10 +14,10 @@
 }
 
 /* Patient Home ========= */
-.patient-home__container {
+.home__container {
   width: 100%;
   height: 750px;
-  background-image: url(../../../img/nurse-background.svg);
+  background-image: url(../../img/nurse-background.svg);
   background-repeat: no-repeat;
   background-color: var(--background);
   background-position: bottom right;
@@ -25,24 +25,28 @@
   overflow: auto;
 }
 
-.patient-home__container h1 {
+.home__container.doctor {
+  background-image: url(../../img/doctor-background.svg);
+}
+
+.home__container h1 {
   font-weight: 400;
   font-size: 30px;
   color: var(--primary-color);
 }
 
-.patient-home__content {
+.home__content {
   display: flex;
 }
 
-.patient-home__left-content > h2 {
+.home__left-content > h2 {
   font-weight: 400;
   font-size: 24px;
   color: var(--secondary-color);
   margin-top: 30px;
 }
 
-/* .patient-home__content {
+/* .home__content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

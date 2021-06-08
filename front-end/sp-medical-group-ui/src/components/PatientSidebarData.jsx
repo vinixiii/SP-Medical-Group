@@ -1,18 +1,17 @@
 //Libs
 import React from 'react';
-import { FiLogOut } from 'react-icons/fi';
 import { FaHome, FaNotesMedical } from 'react-icons/fa';
 
 const PatientSidebarData = [
   {
     title: 'Início',
     icon: <FaHome />,
-    path: '/inicio-paciente',
+    path: '/inicio',
   },
   {
     title: 'Consultas',
     icon: <FaNotesMedical />,
-    path: '/consultas-paciente',
+    path: '/consultas',
   },
   // {
   //   title: 'Sair',
