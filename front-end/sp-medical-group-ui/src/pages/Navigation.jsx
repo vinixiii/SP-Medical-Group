@@ -1,6 +1,7 @@
 //Libs
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { FaUserShield } from 'react-icons/fa';
 
 //Styles
 import '../styles/pages/Navigation.css';
@@ -14,16 +15,20 @@ import Dashboard from '../pages/Dashboard';
 import Users from '../pages/Users';
 import Appointments from '../pages/Appointments';
 
+//SidebarData
+import SidebarData from '../components/SidebarData';
+
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(true);
 
   return (
     <div className="navigation__container">
       <Router>
-        <Sidebar showSidebar={showSidebar} />
+        <Sidebar showSidebar={showSidebar} sidebarData={SidebarData} />
         <div className="navigation__content">
           <Header
             username={'Admin'}
+            icon={<FaUserShield />}
             showSidebar={showSidebar}
             setShowSidebar={setShowSidebar}
           />

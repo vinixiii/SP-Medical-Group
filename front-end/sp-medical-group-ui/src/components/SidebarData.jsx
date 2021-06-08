@@ -1,7 +1,7 @@
 //Libs
 import React from 'react';
 import { RiDashboardLine, RiStethoscopeFill } from 'react-icons/ri';
-import { FiLogOut } from 'react-icons/fi';
+// import { FiLogOut } from 'react-icons/fi';
 import {
   FaUsers,
   FaUserShield,
@@ -15,48 +15,48 @@ const SidebarData = [
   {
     title: 'Dashboard',
     icon: <RiDashboardLine />,
-    link: '/dashboard',
+    path: '/dashboard',
   },
   {
     title: 'Usuários',
     icon: <FaUsers />,
-    link: '/usuarios',
+    path: '/usuarios',
   },
   {
     title: 'Admin',
     icon: <FaUserShield />,
-    link: '/admin',
+    path: '/admin',
   },
   {
     title: 'Médicos',
     icon: <FaUserMd />,
-    link: '/medicos',
+    path: '/medicos',
   },
   {
     title: 'Pacientes',
     icon: <FaUserPlus />,
-    link: '/pacientes',
+    path: '/pacientes',
   },
   {
     title: 'Consultas',
     icon: <FaNotesMedical />,
-    link: '/consultas',
+    path: '/consultas',
   },
   {
     title: 'Clínicas',
     icon: <FaHospital />,
-    link: '/clinicas',
+    path: '/clinicas',
   },
   {
     title: 'Especialidades',
     icon: <RiStethoscopeFill />,
-    link: '/especialidades',
+    path: '/especialidades',
   },
-  {
-    title: 'Sair',
-    icon: <FiLogOut />,
-    link: '',
-  },
+  // {
+  //   title: 'Sair',
+  //   icon: <FiLogOut />,
+  //   path: '',
+  // },
 ];
 
 export default SidebarData;

@@ -13,8 +13,10 @@
   --delete-red: #ea4747;
 }
 
+/* Dashboard ========= */
 .dashboard__container h1 {
   font-weight: 400;
+  font-size: 30px;
   color: var(--primary-color);
 }
 

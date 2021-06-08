@@ -13,16 +13,22 @@
   --delete-red: #ea4747;
 }
 
-/* Appointments ========= */
-.appointments__container h1 {
+/* Patient Home ========= */
+.patient-home__container h1 {
   font-weight: 400;
   font-size: 30px;
   color: var(--primary-color);
 }
 
-.appointments__header {
+.patient-home__container > h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-top: 30px;
+}
+
+/* .patient-home__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-}
+} */

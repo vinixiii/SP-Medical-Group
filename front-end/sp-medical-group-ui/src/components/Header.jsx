@@ -1,13 +1,11 @@
 //Libs
 import React from 'react';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
-import { FaUserShield } from 'react-icons/fa';
-// import { GoThreeBars } from 'react-icons/go';
 
 //Styles
 import '../styles/components/Header.css';
 
-const Header = ({ username, showSidebar, setShowSidebar }) => {
+const Header = ({ username, icon, showSidebar, setShowSidebar }) => {
   return (
     <header className="header__header">
       <div className="header__container">
@@ -24,7 +22,7 @@ const Header = ({ username, showSidebar, setShowSidebar }) => {
         )}
         <div className="header__content">
           <span className="header__title">{username}</span>
-          <FaUserShield />
+          {icon}
           {/* <img
             className="header__header-img"
             src={image}

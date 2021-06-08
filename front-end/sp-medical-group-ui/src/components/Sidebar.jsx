@@ -1,6 +1,7 @@
 //Libs
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 
 //Styles
 import '../styles/components/Sidebar.css';
@@ -8,10 +9,7 @@ import '../styles/components/Sidebar.css';
 //Images
 import logo from '../img/icons/sp-medical-group-logo.svg';
 
-//Data
-import SidebarData from './SidebarData';
-
-const Sidebar = ({ showSidebar }) => {
+const Sidebar = ({ showSidebar, sidebarData }) => {
   const [pathname, setPathname] = useState(window.location.pathname);
 
   return (
@@ -19,17 +17,17 @@ const Sidebar = ({ showSidebar }) => {
       <nav className="sidebar__nav">
         <img className="sidebar__logo" src={logo} alt="" />
         <ul className="sidebar__ul">
-          {SidebarData.map(({ title, icon, link }) => {
+          {sidebarData.map(({ title, icon, path }) => {
             return (
               <li className="sidebar__li" key={title}>
                 <Link
                   className="sidebar__link"
-                  to={link}
-                  onClick={() => setPathname(link)}
+                  to={path}
+                  onClick={() => setPathname(path)}
                 >
                   <div
                     className="sidebar__current-page"
-                    id={pathname === link ? 'active' : ''}
+                    id={pathname === path ? 'active' : ''}
                   >
                     {icon}
                     <span>{title}</span>
@@ -38,6 +36,15 @@ const Sidebar = ({ showSidebar }) => {
               </li>
             );
           })}
+          <li className="sidebar__li">
+            <a className="sidebar__link" href="/">
+              <div className="sidebar__current-page">
+                <FiLogOut />
+
+                <span>Sair</span>
+              </div>
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
