@@ -33,7 +33,7 @@ const data = [
     especialidades: 'Pediatria',
     data: '20/01/2020',
     horario: '15:00',
-    status: 'Agendada',
+    status: 'Cancelada',
     descricao: 'Início do tratamento',
   },
 ];

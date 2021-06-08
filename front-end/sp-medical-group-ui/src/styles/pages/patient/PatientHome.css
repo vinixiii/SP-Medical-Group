@@ -14,13 +14,28 @@
 }
 
 /* Patient Home ========= */
+.patient-home__container {
+  width: 100%;
+  height: 750px;
+  background-image: url(../../../img/nurse-background.svg);
+  background-repeat: no-repeat;
+  background-color: var(--background);
+  background-position: bottom right;
+  object-fit: contain;
+  overflow: auto;
+}
+
 .patient-home__container h1 {
   font-weight: 400;
   font-size: 30px;
   color: var(--primary-color);
 }
 
-.patient-home__container > h2 {
+.patient-home__content {
+  display: flex;
+}
+
+.patient-home__left-content > h2 {
   font-weight: 400;
   font-size: 24px;
   color: var(--secondary-color);

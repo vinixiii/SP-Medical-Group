@@ -16,15 +16,17 @@
 .navigation__container {
   background-color: var(--background);
   display: flex;
+  /* overflow: hidden; */
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .navigation__content {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .navigation__main {
   width: 95%;
-  height: auto;
   margin: 80px auto 0;
 }
