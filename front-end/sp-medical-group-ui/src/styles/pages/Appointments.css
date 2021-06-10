@@ -26,3 +26,62 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+/* Appointments Modal ========= */
+.appointments__modal-title {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.appointments__form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appointments__form label {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin: 12px 0 6px 0;
+}
+
+.appointments__form input,
+.appointments__form select {
+  height: 40px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.appointments__form input:focus {
+  outline: unset;
+  border: none;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.appointments__btns {
+  align-self: flex-end;
+}
+
+.appointments__form button {
+  width: 130px;
+  height: 40px;
+  font-size: 16px;
+  margin: 40px 0 0 20px;
+  border-radius: 6px;
+  border: unset;
+  outline: unset;
+  cursor: pointer;
+  color: #fff;
+}
+
+.appointments__btn-cancel {
+  background-color: var(--delete-red);
+}
+
+.appointments__btn-send {
+  background-color: var(--primary-color);
+}

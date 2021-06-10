@@ -20,7 +20,7 @@ import Appointments from '../pages/Appointments';
 import SidebarData from '../components/SidebarData';
 import PatientSidebarData from '../components/PatientSidebarData';
 
-const role = '';
+const role = 'admin';
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(true);

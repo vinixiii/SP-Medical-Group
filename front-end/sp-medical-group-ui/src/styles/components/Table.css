@@ -16,10 +16,15 @@
 /* Table ========= */
 .table__container {
   max-width: 100%;
-  height: 80%;
+  height: 670px;
   margin-top: 36px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.table__container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .table__data-table {
