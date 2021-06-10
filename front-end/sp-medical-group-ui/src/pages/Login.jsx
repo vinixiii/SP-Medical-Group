@@ -1,11 +1,17 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import doctors from '../img/doctors.svg';
 import logo from '../img/icons/sp-medical-group-logo.svg';
 
 import '../styles/pages/Login.css';
 
+//Services
+import { parseJWT } from '../services/Auth';
+
 const Login = () => {
+  const history = useHistory();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -26,6 +32,15 @@ const Login = () => {
       .then((res) => {
         if (res.status === 200) {
           localStorage.setItem('token', res.data.token);
+
+          if (parseJWT().role === '1') {
+            history.push('/dashboard');
+            // window.location.reload();
+          } else {
+            history.push('/inicio');
+            // window.location.reload();
+          }
+
           setIsLoading(false);
         }
       })
@@ -78,7 +93,7 @@ const Login = () => {
             // Caso seja true, renderiza o botão desabilitado com o texto 'Loading...'
             isLoading === true ? (
               <button className="login__form-btn" type="submit" disabled>
-                Loading...
+                Entrando...
               </button>
             ) : (
               <button

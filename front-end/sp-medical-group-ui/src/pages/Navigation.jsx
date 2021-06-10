@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { FaUserShield, FaUserPlus } from 'react-icons/fa';
 
+//Services
+import { parseJWT } from '../services/Auth';
+
 //Styles
 import '../styles/pages/Navigation.css';
 
@@ -20,9 +23,8 @@ import Appointments from '../pages/Appointments';
 import SidebarData from '../components/SidebarData';
 import PatientSidebarData from '../components/PatientSidebarData';
 
-const role = 'admin';
-
 const Navigation = () => {
+  const role = parseJWT().role;
   const [showSidebar, setShowSidebar] = useState(true);
 
   return (
@@ -30,18 +32,18 @@ const Navigation = () => {
       <Router>
         <Sidebar
           showSidebar={showSidebar}
-          sidebarData={role === 'admin' ? SidebarData : PatientSidebarData}
+          sidebarData={role === '1' ? SidebarData : PatientSidebarData}
         />
         <div className="navigation__content">
           <Header
-            username={role === 'admin' ? 'Admin' : 'Paciente'}
-            icon={role === 'admin' ? <FaUserShield /> : <FaUserPlus />}
+            username={role === '1' ? 'Admin' : 'Paciente'}
+            icon={role === '1' ? <FaUserShield /> : <FaUserPlus />}
             showSidebar={showSidebar}
             setShowSidebar={setShowSidebar}
           />
 
           <main className="navigation__main">
-            {role === 'admin' ? (
+            {role === '1' ? (
               <>
                 <Route path="/dashboard" component={Dashboard} />
                 <Route path="/usuarios" component={Users} />

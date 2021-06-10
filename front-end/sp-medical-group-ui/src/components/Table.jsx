@@ -17,7 +17,6 @@ const Table = ({ columns, data, role }) => {
 
       i++;
     }
-    console.log(items);
     return (
       <tr key={index}>
         {items.map((item, index) => (
