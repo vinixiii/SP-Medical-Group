@@ -11,11 +11,11 @@ const HomeCard = ({ role, date, name, specialty, time, status }) => {
       <div className="home-card__left-content">
         <h2>{date}</h2>
         <div className="home-card__name">
-          {role === 'patient' ? <FaUserMd /> : <FaUserPlus />}
+          {role === '2' ? <FaUserMd /> : <FaUserPlus />}
           <span>{name}</span>
         </div>
 
-        {role === 'patient' && (
+        {role === '2' && (
           <div className="home-card__specialty">
             <RiStethoscopeFill />
             <span>{specialty}</span>

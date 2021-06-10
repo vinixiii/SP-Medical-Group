@@ -42,7 +42,7 @@ const Table = ({ columns, data, role }) => {
             </span>
           </td>
         ))}
-        {role === 'admin' && (
+        {role === '1' && (
           <td className="table__icons">
             <FiEdit className="table__edit-icon" />
             <FiTrash className="table__delete-icon" />
@@ -60,7 +60,7 @@ const Table = ({ columns, data, role }) => {
             {columns.map((column, index) => (
               <th key={index}>{column}</th>
             ))}
-            {role === 'admin' && <th>Ações</th>}
+            {role === '1' && <th>Ações</th>}
           </tr>
         </thead>
         <tbody>{mappedData}</tbody>

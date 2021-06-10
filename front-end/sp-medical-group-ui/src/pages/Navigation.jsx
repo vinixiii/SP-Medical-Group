@@ -24,7 +24,10 @@ import SidebarData from '../components/SidebarData';
 import PatientSidebarData from '../components/PatientSidebarData';
 
 const Navigation = () => {
+  //User role authorization
   const role = parseJWT().role;
+
+  //Sidebar
   const [showSidebar, setShowSidebar] = useState(true);
 
   return (

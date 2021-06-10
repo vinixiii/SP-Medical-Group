@@ -37,7 +37,11 @@ const Sidebar = ({ showSidebar, sidebarData }) => {
             );
           })}
           <li className="sidebar__li">
-            <a className="sidebar__link" href="/">
+            <a
+              className="sidebar__link"
+              href="/"
+              onClick={() => localStorage.removeItem('token')}
+            >
               <div className="sidebar__current-page">
                 <FiLogOut />
 

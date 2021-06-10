@@ -1,21 +1,22 @@
 //Libs
 import React from 'react';
 
+//Services
+import { parseJWT } from '../services/Auth';
+
 //Styles
 import '../styles/pages/Home.css';
 
 //Components
 import HomeCard from '../components/HomeCard';
 
-// const role = '';
-const role = '';
-
 const Home = () => {
+  //User role authorization
+  const role = parseJWT().role;
+
   return (
     <section
-      className={
-        role === 'patient' ? 'home__container' : 'home__container doctor'
-      }
+      className={role === '2' ? 'home__container' : 'home__container doctor'}
     >
       <h1>Olá, Paciente!</h1>
       <div className="home__content">

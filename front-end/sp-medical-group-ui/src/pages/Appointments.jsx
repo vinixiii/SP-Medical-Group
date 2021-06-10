@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+//Services
+import { parseJWT } from '../services/Auth';
+
 //Styles
 import '../styles/pages/Appointments.css';
 
@@ -10,9 +13,10 @@ import Button from '../components/Button';
 import Table from '../components/Table';
 import Modal from '../components/Modal';
 
-const role = 'admin';
-
 const Appointments = () => {
+  //User role authorization
+  const role = parseJWT().role;
+
   //Appointments List
   const [appointmentsList, setAppointmentsList] = useState([]);
 
