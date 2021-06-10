@@ -25,10 +25,15 @@ const Appointments = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
 
+  //List of appointments
   const listAppointments = () => {
+    //Make a request from API to get the appointments data
     axios('http://localhost:5000/api/consultas').then(async (res) => {
+      //If the status code is 200:
       if (res.status === 200) {
-        const mappedAppointments = await res.data.map((a, index) => {
+        //Store just the necessary properties in the mappedAppointment array
+        const mappedAppointments = await res.data.map((a) => {
+          //Create an object with just the necessary props that are coming from res.data
           const appointment = {
             paciente: a.idPacienteNavigation.nome,
             medico: a.idMedicoNavigation.nome,
@@ -43,9 +48,11 @@ const Appointments = () => {
             descricao: a.descricao,
           };
 
+          //Return the appointment object
           return appointment;
         });
 
+        //Set appointmentsList with the value of mappedAppointments
         setAppointmentsList(mappedAppointments);
       }
     });
