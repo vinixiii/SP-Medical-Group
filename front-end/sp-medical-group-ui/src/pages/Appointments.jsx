@@ -30,47 +30,111 @@ const Appointments = () => {
   const [time, setTime] = useState('');
 
   //List of appointments
-  const listAppointments = () => {
-    //Make a request from API to get the appointments data
-    axios('http://localhost:5000/api/consultas').then(async (res) => {
-      //If the status code is 200:
-      if (res.status === 200) {
-        //Store just the necessary properties in the mappedAppointment array
-        const mappedAppointments = await res.data.map((a) => {
-          //Create an object with just the necessary props that are coming from res.data
-          const appointment = {
-            paciente: a.idPacienteNavigation.nome,
-            medico: a.idMedicoNavigation.nome,
-            especialidade:
-              a.idMedicoNavigation.idEspecialidadeNavigation.titulo,
-            data: new Date(a.dataAgendamento).toLocaleDateString(),
-            horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
-              hour: '2-digit',
-              minute: '2-digit',
-            }),
-            status: a.idSituacaoNavigation.titulo,
-            descricao: a.descricao,
-          };
+  useEffect(() => {
+    const listAppointments = () => {
+      if (role === '1') {
+        axios('http://localhost:5000/api/consultas').then(async (res) => {
+          //If the status code is 200:
+          if (res.status === 200) {
+            //Store just the necessary properties in the mappedAppointment array
+            const mappedAppointments = await res.data.map((a) => {
+              //Create an object with just the necessary props that are coming from res.data
+              const appointment = {
+                paciente: a.idPacienteNavigation.nome,
+                medico: a.idMedicoNavigation.nome,
+                especialidade:
+                  a.idMedicoNavigation.idEspecialidadeNavigation.titulo,
+                data: new Date(a.dataAgendamento).toLocaleDateString(),
+                horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                }),
+                status: a.idSituacaoNavigation.titulo,
+                descricao: a.descricao,
+              };
 
-          //Return the appointment object
-          return appointment;
+              //Return the appointment object
+              return appointment;
+            });
+
+            //Set appointmentsList with the value of mappedAppointments
+            setAppointmentsList(mappedAppointments);
+          }
         });
+      } else {
+        if (role === '2') {
+          axios('http://localhost:5000/api/consultas/minhas-consultas', {
+            headers: {
+              Authorization: 'Bearer ' + localStorage.getItem('token'),
+            },
+          }).then(async (res) => {
+            //If the status code is 200:
+            if (res.status === 200) {
+              //Store just the necessary properties in the mappedAppointment array
+              const patientAppointments = await res.data.map((a) => {
+                //Create an object with just the necessary props that are coming from res.data
+                const appointment = {
+                  medico: a.idMedicoNavigation.nome,
+                  especialidade:
+                    a.idMedicoNavigation.idEspecialidadeNavigation.titulo,
+                  data: new Date(a.dataAgendamento).toLocaleDateString(),
+                  horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  }),
+                  status: a.idSituacaoNavigation.titulo,
+                };
 
-        //Set appointmentsList with the value of mappedAppointments
-        setAppointmentsList(mappedAppointments);
+                //Return the appointment object
+                return appointment;
+              });
+
+              //Set appointmentsList with the value of patientAppointments
+              setAppointmentsList(patientAppointments);
+            }
+          });
+        } else {
+          axios('http://localhost:5000/api/consultas/minhas-consultas', {
+            headers: {
+              Authorization: 'Bearer ' + localStorage.getItem('token'),
+            },
+          }).then(async (res) => {
+            //If the status code is 200:
+            if (res.status === 200) {
+              //Store just the necessary properties in the mappedAppointment array
+              const doctorAppointments = await res.data.map((a) => {
+                //Create an object with just the necessary props that are coming from res.data
+                const appointment = {
+                  paciente: a.idPacienteNavigation.nome,
+                  data: new Date(a.dataAgendamento).toLocaleDateString(),
+                  horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  }),
+                  status: a.idSituacaoNavigation.titulo,
+                  descricao: a.descricao,
+                };
+
+                //Return the appointment object
+                return appointment;
+              });
+
+              //Set appointmentsList with the value of doctorAppointments
+              setAppointmentsList(doctorAppointments);
+            }
+          });
+        }
       }
-    });
-  };
+    };
 
-  useEffect(listAppointments, []);
-
-  console.log(appointmentsList);
+    listAppointments();
+  }, [role]);
 
   return (
     <div className="appointments__container">
       <div className="appointments__header">
         <h1>Consultas</h1>
-        {role === 'admin' && (
+        {role === '1' && (
           <Button
             title="+ Nova consulta"
             onClick={() => setIsModalOpen(true)}
@@ -90,7 +154,7 @@ const Appointments = () => {
           'Descrição',
         ]}
       />
-      {role === 'admin' && (
+      {role === '1' && (
         <Modal isOpen={isModalOpen}>
           <h2 className="appointments__modal-title">Nova consulta</h2>
           <form className="appointments__form">
