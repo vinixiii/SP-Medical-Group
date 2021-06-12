@@ -57,59 +57,20 @@ const Appointments = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
 
-  //Get the list of appointments from API when appointment description is modified
-  const reloadTable = () => {
-    //Get the list of appointments based on the doctor/patient id
-    axios('http://localhost:5000/api/consultas/minhas-consultas', {
-      //Define authorization method passing the JWT token to the API
-      headers: {
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
-      },
-    }).then(async (res) => {
-      //If the status code from response is 200:
-      if (res.status === 200) {
-        //Map the res.data array and store just the necessary properties
-        //in a new array referring 'doctorAppointments'
-        const doctorAppointments = await res.data.map((a) => {
-          //Create an object named 'appointment' to store the necessary properties
-          const appointment = {
-            id: a.idConsulta,
-            paciente: a.idPacienteNavigation.nome,
-            data: new Date(a.dataAgendamento).toLocaleDateString(),
-            horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
-              hour: '2-digit',
-              minute: '2-digit',
-            }),
-            status: a.idSituacaoNavigation.titulo,
-            descricao: a.descricao !== undefined ? a.descricao : 'N/A',
-          };
-
-          //Return the 'appointment' object
-          return appointment;
-        });
-
-        //Set 'appointmentsList' with the value of 'doctorAppointments'
-        setAppointmentsList(doctorAppointments);
-      }
-    });
-  };
-
-  useEffect(() => {
-    //Get the list of appointments from API when the table is mounted
-    const listAppointments = () => {
-      //If the user logged in is an Adm
-      if (role === '1') {
-        //Get the list of all appointments
-        axios('http://localhost:5000/api/consultas', {
-          headers: {
-            Authorization: 'Bearer ' + localStorage.getItem('token'),
-          },
-        }).then(async (res) => {
+  const listAppointments = (role) => {
+    if (role === '1') {
+      //Get the list of all appointments
+      axios('http://localhost:5000/api/consultas', {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+        .then((res) => {
           //If the status code from response is 200:
           if (res.status === 200) {
             //Map the res.data array and store just the necessary properties
             //in a new array referring 'allAppointments'
-            const allAppointments = await res.data.map((a) => {
+            const allAppointments = res.data.map((a) => {
               //Create an object named 'appointment' to store the necessary properties
               const appointment = {
                 id: a.idConsulta,
@@ -133,22 +94,23 @@ const Appointments = () => {
             //Set 'appointmentsList' with the value of 'allAppointments'
             setAppointmentsList(allAppointments);
           }
-        });
-      } else {
-        //If the user logged in is an Patient
-        if (role === '2') {
-          //Get the list of appointments based on the doctor/patient id
-          axios('http://localhost:5000/api/consultas/minhas-consultas', {
-            //Define authorization method passing the JWT token to the API
-            headers: {
-              Authorization: 'Bearer ' + localStorage.getItem('token'),
-            },
-          }).then(async (res) => {
-            //If the status code from response is 200:
-            if (res.status === 200) {
+        })
+        .catch((err) => console.log(err));
+    } else if (role === '2' || role === '3') {
+      //Get the list of appointments based on the doctor/patient id
+      axios('http://localhost:5000/api/consultas/minhas-consultas', {
+        //Define authorization method passing the JWT token to the API
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+        .then((res) => {
+          //If the status code from response is 200:
+          if (res.status === 200) {
+            if (role === '2') {
               //Map the res.data array and store just the necessary properties
               //in a new array referring 'patientAppointments'
-              const patientAppointments = await res.data.map((a) => {
+              const patientAppointments = res.data.map((a) => {
                 //Create an object named 'appointment' to store the necessary properties
                 const appointment = {
                   medico: a.idMedicoNavigation.nome,
@@ -168,21 +130,10 @@ const Appointments = () => {
 
               //Set 'appointmentsList' with the value of 'patientAppointments'
               setAppointmentsList(patientAppointments);
-            }
-          });
-        } else {
-          //Get the list of appointments based on the doctor/patient id
-          axios('http://localhost:5000/api/consultas/minhas-consultas', {
-            //Define authorization method passing the JWT token to the API
-            headers: {
-              Authorization: 'Bearer ' + localStorage.getItem('token'),
-            },
-          }).then(async (res) => {
-            //If the status code from response is 200:
-            if (res.status === 200) {
+            } else if (role === '3') {
               //Map the res.data array and store just the necessary properties
               //in a new array referring 'doctorAppointments'
-              const doctorAppointments = await res.data.map((a) => {
+              const doctorAppointments = res.data.map((a) => {
                 //Create an object named 'appointment' to store the necessary properties
                 const appointment = {
                   id: a.idConsulta,
@@ -203,55 +154,48 @@ const Appointments = () => {
               //Set 'appointmentsList' with the value of 'doctorAppointments'
               setAppointmentsList(doctorAppointments);
             }
-          });
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
+  const listPatients = () => {
+    //Get the list of all patients
+    axios('http://localhost:5000/api/pacientes', {
+      //Define authorization method passing the JWT token to the API
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+      },
+    })
+      .then((res) => {
+        //If the status code from response is 200:
+        if (res.status === 200) {
+          setPatientsList(res.data);
         }
-      }
-    };
-
-    //If the user logged in is an Adm
-    // if (role === 1) {
-    const listPatients = () => {
-      //Get the list of all patients
-      axios('http://localhost:5000/api/pacientes', {
-        //Define authorization method passing the JWT token to the API
-        headers: {
-          Authorization: 'Bearer ' + localStorage.getItem('token'),
-        },
       })
-        .then((res) => {
-          //If the status code from response is 200:
-          if (res.status === 200) {
-            setPatientsList(res.data);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-    const listDoctors = () => {
-      //Get the list of all doctors
-      axios('http://localhost:5000/api/medicos', {
-        headers: {
-          Authorization: 'Bearer ' + localStorage.getItem('token'),
-        },
+  const listDoctors = () => {
+    //Get the list of all doctors
+    axios('http://localhost:5000/api/medicos', {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+      },
+    })
+      .then((res) => {
+        //If the status code from response is 200:
+        if (res.status === 200) {
+          setDoctorsList(res.data);
+        }
       })
-        .then((res) => {
-          //If the status code from response is 200:
-          if (res.status === 200) {
-            setDoctorsList(res.data);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-
-    listPatients();
-    listDoctors();
-    //Call the function to list the appointments
-    listAppointments();
-  }, [role]);
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const resetFormStates = () => {
     setPatient('');
@@ -277,47 +221,22 @@ const Appointments = () => {
       })
       .then((res) => {
         if (res.status === 201) {
-          //Get the list of all appointments
-          axios('http://localhost:5000/api/consultas', {
-            headers: {
-              Authorization: 'Bearer ' + localStorage.getItem('token'),
-            },
-          }).then(async (res) => {
-            //If the status code from response is 200:
-            if (res.status === 200) {
-              //Map the res.data array and store just the necessary properties
-              //in a new array referring 'allAppointments'
-              const allAppointments = await res.data.map((a) => {
-                //Create an object named 'appointment' to store the necessary properties
-                const appointment = {
-                  id: a.idConsulta,
-                  paciente: a.idPacienteNavigation.nome,
-                  medico: a.idMedicoNavigation.nome,
-                  especialidade:
-                    a.idMedicoNavigation.idEspecialidadeNavigation.titulo,
-                  data: new Date(a.dataAgendamento).toLocaleDateString(),
-                  horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  }),
-                  status: a.idSituacaoNavigation.titulo,
-                  descricao: a.descricao !== undefined ? a.descricao : 'N/A',
-                };
-
-                //Return the 'appointment' object
-                return appointment;
-              });
-
-              //Set 'appointmentsList' with the value of 'allAppointments'
-              setAppointmentsList(allAppointments);
-            }
-          });
+          listAppointments(role);
         }
       });
 
     setIsModalOpen(false);
     resetFormStates();
   };
+
+  useEffect(() => {
+    listAppointments(role);
+
+    if (role === '1') {
+      listDoctors();
+      listPatients();
+    }
+  }, [role]);
 
   return (
     <div className="appointments__container">
@@ -338,7 +257,7 @@ const Appointments = () => {
           (role === '2' && patientColumns) ||
           (role === '3' && doctorColumns)
         }
-        reloadTable={reloadTable}
+        reloadTable={listAppointments}
       />
       {role === '1' && (
         <Modal isOpen={isModalOpen}>

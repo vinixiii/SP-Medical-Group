@@ -33,6 +33,8 @@ const Login = () => {
         if (res.status === 200) {
           localStorage.setItem('token', res.data.token);
 
+          setIsLoading(false);
+
           if (parseJWT().role === '1') {
             history.push('/dashboard');
             // window.location.reload();
@@ -40,8 +42,6 @@ const Login = () => {
             history.push('/inicio');
             // window.location.reload();
           }
-
-          setIsLoading(false);
         }
       })
       .catch(() => {

@@ -37,7 +37,7 @@ const Table = ({ columns, data, role, reloadTable }) => {
       .then((res) => {
         if (res.status === 204) {
           onCancel();
-          reloadTable();
+          reloadTable(role);
         }
       })
       .catch((err) => {
@@ -75,7 +75,7 @@ const Table = ({ columns, data, role, reloadTable }) => {
 
     return (
       <tr key={index}>
-        {items.map((row, index) => (
+        {items.slice(1).map((row, index) => (
           <td key={index}>
             <span
               className={
@@ -152,7 +152,7 @@ const Table = ({ columns, data, role, reloadTable }) => {
       <table className="table__data-table">
         <thead>
           <tr>
-            {columns.map((column, index) => (
+            {columns.slice(1).map((column, index) => (
               <th key={index}>{column}</th>
             ))}
             {(role === '1' || role === '3') && <th>Ações</th>}
