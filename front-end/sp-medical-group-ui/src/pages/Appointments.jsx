@@ -13,6 +13,31 @@ import Button from '../components/Button';
 import Table from '../components/Table';
 import Modal from '../components/Modal';
 
+//Adm table columns data
+const admColumns = [
+  '#',
+  'Paciente',
+  'Médico',
+  'Especialidade',
+  'Data',
+  'Horário',
+  'Status',
+  'Descrição',
+];
+
+//Patient table columns data
+const patientColumns = ['Médico', 'Especialidade', 'Data', 'Horário', 'Status'];
+
+//Doctor table columns data
+const doctorColumns = [
+  '#',
+  'Paciente',
+  'Data',
+  'Horário',
+  'Status',
+  'Descrição',
+];
+
 const Appointments = () => {
   //User role authorization
   const role = parseJWT().role;
@@ -24,22 +49,70 @@ const Appointments = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   //Form
-  // const [patient, setPatient] = useState('');
-  // const [doctor, setDoctor] = useState('');
+  const [patientsList, setPatientsList] = useState([]);
+  const [doctorsList, setDoctorsList] = useState([]);
+
+  const [patient, setPatient] = useState('');
+  const [doctor, setDoctor] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
 
-  //List of appointments
+  //Get the list of appointments from API when appointment description is modified
+  const reloadTable = () => {
+    //Get the list of appointments based on the doctor/patient id
+    axios('http://localhost:5000/api/consultas/minhas-consultas', {
+      //Define authorization method passing the JWT token to the API
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+      },
+    }).then(async (res) => {
+      //If the status code from response is 200:
+      if (res.status === 200) {
+        //Map the res.data array and store just the necessary properties
+        //in a new array referring 'doctorAppointments'
+        const doctorAppointments = await res.data.map((a) => {
+          //Create an object named 'appointment' to store the necessary properties
+          const appointment = {
+            id: a.idConsulta,
+            paciente: a.idPacienteNavigation.nome,
+            data: new Date(a.dataAgendamento).toLocaleDateString(),
+            horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
+              hour: '2-digit',
+              minute: '2-digit',
+            }),
+            status: a.idSituacaoNavigation.titulo,
+            descricao: a.descricao !== undefined ? a.descricao : 'N/A',
+          };
+
+          //Return the 'appointment' object
+          return appointment;
+        });
+
+        //Set 'appointmentsList' with the value of 'doctorAppointments'
+        setAppointmentsList(doctorAppointments);
+      }
+    });
+  };
+
   useEffect(() => {
+    //Get the list of appointments from API when the table is mounted
     const listAppointments = () => {
+      //If the user logged in is an Adm
       if (role === '1') {
-        axios('http://localhost:5000/api/consultas').then(async (res) => {
-          //If the status code is 200:
+        //Get the list of all appointments
+        axios('http://localhost:5000/api/consultas', {
+          headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token'),
+          },
+        }).then(async (res) => {
+          //If the status code from response is 200:
           if (res.status === 200) {
-            //Store just the necessary properties in the mappedAppointment array
-            const mappedAppointments = await res.data.map((a) => {
-              //Create an object with just the necessary props that are coming from res.data
+            //Map the res.data array and store just the necessary properties
+            //in a new array referring 'allAppointments'
+            const allAppointments = await res.data.map((a) => {
+              //Create an object named 'appointment' to store the necessary properties
               const appointment = {
+                id: a.idConsulta,
                 paciente: a.idPacienteNavigation.nome,
                 medico: a.idMedicoNavigation.nome,
                 especialidade:
@@ -50,29 +123,33 @@ const Appointments = () => {
                   minute: '2-digit',
                 }),
                 status: a.idSituacaoNavigation.titulo,
-                descricao: a.descricao,
+                descricao: a.descricao !== undefined ? a.descricao : 'N/A',
               };
 
-              //Return the appointment object
+              //Return the 'appointment' object
               return appointment;
             });
 
-            //Set appointmentsList with the value of mappedAppointments
-            setAppointmentsList(mappedAppointments);
+            //Set 'appointmentsList' with the value of 'allAppointments'
+            setAppointmentsList(allAppointments);
           }
         });
       } else {
+        //If the user logged in is an Patient
         if (role === '2') {
+          //Get the list of appointments based on the doctor/patient id
           axios('http://localhost:5000/api/consultas/minhas-consultas', {
+            //Define authorization method passing the JWT token to the API
             headers: {
               Authorization: 'Bearer ' + localStorage.getItem('token'),
             },
           }).then(async (res) => {
-            //If the status code is 200:
+            //If the status code from response is 200:
             if (res.status === 200) {
-              //Store just the necessary properties in the mappedAppointment array
+              //Map the res.data array and store just the necessary properties
+              //in a new array referring 'patientAppointments'
               const patientAppointments = await res.data.map((a) => {
-                //Create an object with just the necessary props that are coming from res.data
+                //Create an object named 'appointment' to store the necessary properties
                 const appointment = {
                   medico: a.idMedicoNavigation.nome,
                   especialidade:
@@ -85,26 +162,30 @@ const Appointments = () => {
                   status: a.idSituacaoNavigation.titulo,
                 };
 
-                //Return the appointment object
+                //Return the 'appointment' object
                 return appointment;
               });
 
-              //Set appointmentsList with the value of patientAppointments
+              //Set 'appointmentsList' with the value of 'patientAppointments'
               setAppointmentsList(patientAppointments);
             }
           });
         } else {
+          //Get the list of appointments based on the doctor/patient id
           axios('http://localhost:5000/api/consultas/minhas-consultas', {
+            //Define authorization method passing the JWT token to the API
             headers: {
               Authorization: 'Bearer ' + localStorage.getItem('token'),
             },
           }).then(async (res) => {
-            //If the status code is 200:
+            //If the status code from response is 200:
             if (res.status === 200) {
-              //Store just the necessary properties in the mappedAppointment array
+              //Map the res.data array and store just the necessary properties
+              //in a new array referring 'doctorAppointments'
               const doctorAppointments = await res.data.map((a) => {
-                //Create an object with just the necessary props that are coming from res.data
+                //Create an object named 'appointment' to store the necessary properties
                 const appointment = {
+                  id: a.idConsulta,
                   paciente: a.idPacienteNavigation.nome,
                   data: new Date(a.dataAgendamento).toLocaleDateString(),
                   horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
@@ -112,14 +193,14 @@ const Appointments = () => {
                     minute: '2-digit',
                   }),
                   status: a.idSituacaoNavigation.titulo,
-                  descricao: a.descricao,
+                  descricao: a.descricao !== undefined ? a.descricao : 'N/A',
                 };
 
-                //Return the appointment object
+                //Return the 'appointment' object
                 return appointment;
               });
 
-              //Set appointmentsList with the value of doctorAppointments
+              //Set 'appointmentsList' with the value of 'doctorAppointments'
               setAppointmentsList(doctorAppointments);
             }
           });
@@ -127,8 +208,116 @@ const Appointments = () => {
       }
     };
 
+    //If the user logged in is an Adm
+    // if (role === 1) {
+    const listPatients = () => {
+      //Get the list of all patients
+      axios('http://localhost:5000/api/pacientes', {
+        //Define authorization method passing the JWT token to the API
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+        .then((res) => {
+          //If the status code from response is 200:
+          if (res.status === 200) {
+            setPatientsList(res.data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    const listDoctors = () => {
+      //Get the list of all doctors
+      axios('http://localhost:5000/api/medicos', {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+        .then((res) => {
+          //If the status code from response is 200:
+          if (res.status === 200) {
+            setDoctorsList(res.data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    listPatients();
+    listDoctors();
+    //Call the function to list the appointments
     listAppointments();
   }, [role]);
+
+  const resetFormStates = () => {
+    setPatient('');
+    setDoctor('');
+    setDate('');
+    setTime('');
+  };
+
+  const registerAppointment = (e) => {
+    e.preventDefault();
+
+    const appointment = {
+      idPaciente: patient,
+      idMedico: doctor,
+      dataAgendamento: `${date} ${time}`,
+    };
+
+    axios
+      .post('http://localhost:5000/api/consultas', appointment, {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+      .then((res) => {
+        if (res.status === 201) {
+          //Get the list of all appointments
+          axios('http://localhost:5000/api/consultas', {
+            headers: {
+              Authorization: 'Bearer ' + localStorage.getItem('token'),
+            },
+          }).then(async (res) => {
+            //If the status code from response is 200:
+            if (res.status === 200) {
+              //Map the res.data array and store just the necessary properties
+              //in a new array referring 'allAppointments'
+              const allAppointments = await res.data.map((a) => {
+                //Create an object named 'appointment' to store the necessary properties
+                const appointment = {
+                  id: a.idConsulta,
+                  paciente: a.idPacienteNavigation.nome,
+                  medico: a.idMedicoNavigation.nome,
+                  especialidade:
+                    a.idMedicoNavigation.idEspecialidadeNavigation.titulo,
+                  data: new Date(a.dataAgendamento).toLocaleDateString(),
+                  horario: new Date(a.dataAgendamento).toLocaleTimeString([], {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  }),
+                  status: a.idSituacaoNavigation.titulo,
+                  descricao: a.descricao !== undefined ? a.descricao : 'N/A',
+                };
+
+                //Return the 'appointment' object
+                return appointment;
+              });
+
+              //Set 'appointmentsList' with the value of 'allAppointments'
+              setAppointmentsList(allAppointments);
+            }
+          });
+        }
+      });
+
+    setIsModalOpen(false);
+    resetFormStates();
+  };
 
   return (
     <div className="appointments__container">
@@ -144,33 +333,44 @@ const Appointments = () => {
       <Table
         role={role}
         data={appointmentsList}
-        columns={[
-          'Paciente',
-          'Médico',
-          'Especialidade',
-          'Data',
-          'Horário',
-          'Status',
-          'Descrição',
-        ]}
+        columns={
+          (role === '1' && admColumns) ||
+          (role === '2' && patientColumns) ||
+          (role === '3' && doctorColumns)
+        }
+        reloadTable={reloadTable}
       />
       {role === '1' && (
         <Modal isOpen={isModalOpen}>
           <h2 className="appointments__modal-title">Nova consulta</h2>
-          <form className="appointments__form">
+          <form
+            className="appointments__form"
+            onSubmit={(e) => registerAppointment(e)}
+          >
             <label>Paciente</label>
-            <select>
+            <select
+              value={patient}
+              onChange={(e) => setPatient(e.target.value)}
+            >
               <option value="0">Selecione o paciente</option>
-              <option value="1">Mariana</option>
-              <option value="2">Alexandre</option>
-              <option value="3">João</option>
+              {patientsList.map((p) => {
+                return (
+                  <option key={p.idPaciente} value={p.idPaciente}>
+                    {p.nome}
+                  </option>
+                );
+              })}
             </select>
             <label>Médico</label>
-            <select>
+            <select value={doctor} onChange={(e) => setDoctor(e.target.value)}>
               <option value="0">Selecione o médico</option>
-              <option value="1">Roberto</option>
-              <option value="2">Helena</option>
-              <option value="3">Ricardo</option>
+              {doctorsList.map((d) => {
+                return (
+                  <option key={d.idMedico} value={d.idMedico}>
+                    {d.idEspecialidadeNavigation.titulo} - {d.nome}
+                  </option>
+                );
+              })}
             </select>
             <label>Data</label>
             <input
@@ -187,11 +387,16 @@ const Appointments = () => {
             <div className="appointments__btns">
               <button
                 className="appointments__btn-cancel"
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => {
+                  setIsModalOpen(false);
+                  resetFormStates();
+                }}
               >
                 Cancelar
               </button>
-              <button className="appointments__btn-send">Enviar</button>
+              <button type="submit" className="appointments__btn-send">
+                Enviar
+              </button>
             </div>
           </form>
         </Modal>

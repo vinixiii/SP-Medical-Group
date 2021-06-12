@@ -70,6 +70,24 @@
   background-color: var(--white-background);
 }
 
+.table__input {
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--secondary-color);
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text);
+  padding: 6px 0;
+}
+
+.table__input:focus {
+  border: 0;
+  border-bottom: 1px solid var(--secondary-color);
+  outline: none;
+}
+
 .table__icons svg {
   width: 24px;
   height: 24px;
@@ -85,6 +103,14 @@
   padding: 2px;
 }
 
+.table__save-icon {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  margin-right: 20px;
+  padding: 2px;
+}
+
 .table__delete-icon {
   color: var(--delete-red);
   border: 1px solid var(--delete-red);
@@ -95,6 +121,11 @@
 
 .table__edit-icon:hover {
   background-color: var(--secondary-color);
+  color: var(--white-background);
+}
+
+.table__save-icon:hover {
+  background-color: var(--primary-color);
   color: var(--white-background);
 }
 
@@ -162,4 +193,8 @@
   color: #be2527;
   padding: 6px 10px;
   border-radius: 3px;
+}
+
+.table__no-description {
+  color: var(--option);
 }

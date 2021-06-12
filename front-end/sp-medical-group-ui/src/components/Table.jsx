@@ -1,10 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-import { FiEdit, FiTrash } from 'react-icons/fi';
+import { FiEdit, FiCheck, FiTrash } from 'react-icons/fi';
+import { AiOutlineClose } from 'react-icons/ai';
 
 import '../styles/components/Table.css';
 
-const Table = ({ columns, data, role }) => {
+const Table = ({ columns, data, role, reloadTable }) => {
+  const [inEditMode, setInEditMode] = useState({
+    status: false,
+    rowKey: null,
+  });
+
+  const [desc, setDesc] = useState(null);
+
+  const onEdit = ({ id, currentDesc }) => {
+    setInEditMode({
+      status: true,
+      rowKey: id,
+    });
+
+    setDesc(currentDesc);
+  };
+
+  const updateDescription = ({ id, newDesc }) => {
+    axios
+      .patch(
+        'http://localhost:5000/api/consultas/' + id,
+        { descricao: newDesc },
+        {
+          headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token'),
+          },
+        }
+      )
+      .then((res) => {
+        if (res.status === 204) {
+          onCancel();
+          reloadTable();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const onSave = ({ id, newDesc }) => {
+    updateDescription({ id, newDesc });
+  };
+
+  const onCancel = () => {
+    // reset the inEditMode state value
+    setInEditMode({
+      status: false,
+      rowKey: null,
+    });
+
+    // reset the unit price state value
+    setDesc(null);
+  };
+
   const mappedData = data.map((item, index) => {
     const items = [];
     let i = 0;
@@ -17,35 +72,75 @@ const Table = ({ columns, data, role }) => {
 
       i++;
     }
+
     return (
       <tr key={index}>
-        {items.map((item, index) => (
+        {items.map((row, index) => (
           <td key={index}>
             <span
               className={
-                item.value === 'Administrador'
+                row.value === 'Administrador'
                   ? 'table__admin-type'
-                  : '' || item.value === 'Médico'
+                  : '' || row.value === 'Médico'
                   ? 'table__doctor-type'
-                  : '' || item.value === 'Paciente'
+                  : '' || row.value === 'Paciente'
                   ? 'table__patient-type'
-                  : '' || item.value === 'Agendada'
+                  : '' || row.value === 'Agendada'
                   ? 'table__scheduled-type'
-                  : '' || item.value === 'Realizada'
+                  : '' || row.value === 'Realizada'
                   ? 'table__fullfield-type'
-                  : '' || item.value === 'Cancelada'
+                  : '' || row.value === 'Cancelada'
                   ? 'table__canceled-type'
+                  : '' || row.value === 'N/A'
+                  ? 'table__no-description'
                   : ''
               }
             >
-              {item.value}
+              {row.key === 'Descrição' &&
+              inEditMode.status &&
+              inEditMode.rowKey === item.id ? (
+                <input
+                  className="table__input"
+                  type="text"
+                  defaultValue={row.value}
+                  onChange={(e) => setDesc(e.target.value)}
+                />
+              ) : (
+                row.value
+              )}
             </span>
           </td>
         ))}
         {role === '1' && (
           <td className="table__icons">
-            <FiEdit className="table__edit-icon" />
             <FiTrash className="table__delete-icon" />
+          </td>
+        )}
+        {role === '3' && (
+          <td className="table__icons">
+            {inEditMode.status && inEditMode.rowKey === item.id ? (
+              <>
+                <FiCheck
+                  className="table__save-icon"
+                  onClick={() => {
+                    onSave({ id: item.id, newDesc: desc });
+                  }}
+                />
+                <AiOutlineClose
+                  className="table__delete-icon"
+                  onClick={() => {
+                    onCancel();
+                  }}
+                />
+              </>
+            ) : (
+              <FiEdit
+                className="table__edit-icon"
+                onClick={() =>
+                  onEdit({ id: item.id, currentDesc: item.descricao })
+                }
+              />
+            )}
           </td>
         )}
       </tr>
@@ -60,7 +155,7 @@ const Table = ({ columns, data, role }) => {
             {columns.map((column, index) => (
               <th key={index}>{column}</th>
             ))}
-            {role === '1' && <th>Ações</th>}
+            {(role === '1' || role === '3') && <th>Ações</th>}
           </tr>
         </thead>
         <tbody>{mappedData}</tbody>
