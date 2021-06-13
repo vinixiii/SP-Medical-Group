@@ -83,9 +83,21 @@ const Dashboard = () => {
     <section className="dashboard__container">
       <h1>Dashboard</h1>
       <div className="dashboard__content">
-        <Card number={doctorsNumber} title="Médico" icon={<FaUserMd />} />
-        <Card number={patientsNumber} title="Pacientes" icon={<FaUserPlus />} />
-        <Card number={clinicsNumber} title="Clínicas" icon={<FaHospital />} />
+        <Card
+          number={doctorsNumber}
+          title={doctorsNumber > 1 ? 'Médicos' : 'Médico'}
+          icon={<FaUserMd />}
+        />
+        <Card
+          number={patientsNumber}
+          title={patientsNumber > 1 ? 'Pacientes' : 'Paciente'}
+          icon={<FaUserPlus />}
+        />
+        <Card
+          number={clinicsNumber}
+          title={clinicsNumber > 1 ? 'Clínicas' : 'Clínica'}
+          icon={<FaHospital />}
+        />
         <Card
           number={specialtiesNumber}
           title="Especialidades"

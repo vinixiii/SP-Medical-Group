@@ -113,6 +113,7 @@ const Table = ({ columns, data, role, reloadTable }) => {
         ))}
         {role === '1' && (
           <td className="table__icons">
+            <FiEdit className="table__edit-icon" />
             <FiTrash className="table__delete-icon" />
           </td>
         )}
