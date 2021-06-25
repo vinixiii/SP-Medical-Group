@@ -1,0 +1,276 @@
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.json
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.exe
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.deps.json
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.json
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.dev.json
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Humanizer.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csprojAssemblyReference.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfoInputs.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfo.cs
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CoreCompileInputs.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.Manifest.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.xml
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\scopedcss\bundle\SPMedicalGroup_WebAPI.styles.css
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.RazorTargetAssemblyInfo.cache
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CopyComplete
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+D:\2DM-S2-back-end\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.genruntimeconfig.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.json
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.exe
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.deps.json
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.json
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.dev.json
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Humanizer.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csprojAssemblyReference.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfoInputs.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfo.cs
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CoreCompileInputs.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.Manifest.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.xml
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\scopedcss\bundle\SPMedicalGroup_WebAPI.styles.css
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.RazorTargetAssemblyInfo.cache
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CopyComplete
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+D:\2DM-S2-back-end\projetos\SP_Medical_Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.genruntimeconfig.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.json
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.exe
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.deps.json
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.json
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.dev.json
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csprojAssemblyReference.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfoInputs.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfo.cs
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.Manifest.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.xml
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\scopedcss\bundle\SPMedicalGroup_WebAPI.styles.css
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CopyComplete
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+C:\Users\vinixiii\Desktop\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.genruntimeconfig.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\appsettings.json
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.exe
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.deps.json
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.json
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.runtimeconfig.dev.json
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csprojAssemblyReference.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfoInputs.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.AssemblyInfo.cs
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.Manifest.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\staticwebassets\SPMedicalGroup_WebAPI.StaticWebAssets.xml
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\scopedcss\bundle\SPMedicalGroup_WebAPI.styles.css
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.csproj.CopyComplete
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.xml
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
+C:\Users\vinixiii\Desktop\editar tabela\SP-Medical-Group\back-end\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.genruntimeconfig.cache

@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPMedicalGroup_WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ClinicasController.ListarTodos">
+            <summary>
+            Lista todas as Clinicas
+            </summary>
+            <returns>Uma lista com todas as Clinicas</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ClinicasController.Cadastrar(SPMedicalGroup_WebAPI.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova Clinica
+            </summary>
+            <param name="clinica">Clinica que será cadastrada</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ClinicasController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Clinica existente
+            </summary>
+            <param name="id">Id da Clinica que será deletada</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.ListarTodos">
+            <summary>
+            Lista todas as Consultas
+            </summary>
+            <returns>Um status code Ok(200) e uma lista de Consultas</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.Cadastrar(SPMedicalGroup_WebAPI.Domains.Consulta)">
+            <summary>
+            Cadastra uma nova Consulta
+            </summary>
+            <param name="consulta">Consulta que será cadastrada</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Consulta existente
+            </summary>
+            <param name="id">Id da Consulta que será deletada</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.AtualizarSituacao(System.Int32,System.Int32)">
+            <summary>
+            Atualiza a situação de uma Consulta
+            </summary>
+            <param name="idConsulta">Id da consulta que terá a situação atualizada</param>
+            <param name="idSituacao">Id da nova situação dessa Consulta</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.AtualizarDescricao(System.Int32,SPMedicalGroup_WebAPI.Domains.Consulta)">
+            <summary>
+            Atualiza a descrição de uma Consulta
+            </summary>
+            <param name="id">Id da Consulta que terá a descrição alterada</param>
+            <param name="consulta">Objeto Consulta com a descrição que será atribuida à Consulta atualizada</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.ConsultasController.MinhasConsultas">
+            <summary>
+            Lista as Consultas de um Usuario logado
+            </summary>
+            <returns>Retorna um status code Ok(200) e uma lista de Consultas</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.EspecialidadesController.ListarTodos">
+            <summary>
+            Lista todas as Especialidades
+            </summary>
+            <returns>Uma lista com todas as Especialidades</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.EspecialidadesController.Cadastrar(SPMedicalGroup_WebAPI.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova Especialidade
+            </summary>
+            <param name="especialidade">Especialidade que será cadastrada</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.EspecialidadesController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Especialidade existente
+            </summary>
+            <param name="id">Id da Especialidade que será deletada</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.LoginController.Login(SPMedicalGroup_WebAPI.ViewModels.LoginViewModel)">
+            <summary>
+            Valida um Usuario de acordo com o e-mail e senha
+            </summary>
+            <param name="login">Objeto LoginViewModel que contém o e-mail e a senha do usuário</param>
+            <returns>Um Token com as informações do Usuario ou um status code NotFound(400) com uma mensagem de erro personalizada</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.MedicosController.ListarTodos">
+            <summary>
+            Lista todos os Medicos
+            </summary>
+            <returns>Uma lista com todos os Medicos</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.MedicosController.Cadastrar(SPMedicalGroup_WebAPI.ViewModels.UsuarioMedicoVM)">
+            <summary>
+            Cadastra um novo Usuario/Medico
+            </summary>
+            <param name="um">Usuario/Medico que será cadastrado</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.MedicosController.Deletar(System.Int32)">
+            <summary>
+            Deleta um Medico existente
+            </summary>
+            <param name="id">Id do Medico que será deletado</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.PacientesController.ListarTodos">
+            <summary>
+            Lista todos os Pacientes
+            </summary>
+            <returns>Uma lista com todos os Pacientes</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.PacientesController.Cadastrar(SPMedicalGroup_WebAPI.ViewModels.UsuarioPacienteVM)">
+            <summary>
+            Cadastra um novo Usuario/Paciente
+            </summary>
+            <param name="up">Usuario/Paciente que será cadastrado</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.PacientesController.Deletar(System.Int32)">
+            <summary>
+            Deleta um Paciente existente
+            </summary>
+            <param name="id">Id do Paciente que será deletado</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.UsuariosController.ListarTodos">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Uma lista com todos os Usuarios</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.UsuariosController.Cadastrar(SPMedicalGroup_WebAPI.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="usuario">Usuario que será cadastrado</param>
+            <returns>Um status code Created(201)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Controllers.UsuariosController.Deletar(System.Int32)">
+            <summary>
+            Deleta um Usuario existente
+            </summary>
+            <param name="id">Id do Usuario que será deletado</param>
+            <returns>Um status code NoContent(204)</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IClinica.ListarTodos">
+            <summary>
+            Lista todas as Clinicas
+            </summary>
+            <returns>Uma lista com todas as Clinicas</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IClinica.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma Clinica pelo id
+            </summary>
+            <param name="id">Id da Clinica que será buscada</param>
+            <returns>Uma Clinica com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IClinica.Cadastrar(SPMedicalGroup_WebAPI.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova Clinica
+            </summary>
+            <param name="clinica">Clinica que será cadastrada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IClinica.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Clinica)">
+            <summary>
+            Atualiza uma Clinica existente
+            </summary>
+            <param name="id">Id da Clinica que será atualizada</param>
+            <param name="clinicaAtualizada">Uma Clinica com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IClinica.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Clinica existente
+            </summary>
+            <param name="id">Id da Clinica que será deletada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.ListarTodos">
+            <summary>
+            Lista todas as Consultas
+            </summary>
+            <returns>Uma lista com todas as Consultas</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma Consulta pelo id
+            </summary>
+            <param name="id">Id da Consulta que será buscada</param>
+            <returns>Uma Consulta com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.Cadastrar(SPMedicalGroup_WebAPI.Domains.Consulta)">
+            <summary>
+            Cadastra uma nova Consulta
+            </summary>
+            <param name="consulta">Consulta que será cadastrada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Consulta)">
+            <summary>
+            Atualiza uma Consulta existente
+            </summary>
+            <param name="id">Id da Consulta que será atualizada</param>
+            <param name="consultaAtualizada">Uma Consulta com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Consulta existente
+            </summary>
+            <param name="id">Id da Consulta que será deletada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.MinhasConsultas(System.Int32)">
+            <summary>
+            Lista as consultas de um Usuario logado
+            </summary>
+            <param name="id">Id do Usuario logado que terá as consultas listadas</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.AtualizarDescricao(System.Int32,System.String)">
+            <summary>
+            Atualiza a descrição de uma Consulta
+            </summary>
+            <param name="id">Id da Consulta que terá a descrição alterada</param>
+            <param name="descricao">Descrição que será atribuida à Consulta</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IConsulta.AtualizarSituacao(System.Int32,System.Int32)">
+            <summary>
+            Atualiza a situação de uma consulta
+            </summary>
+            <param name="idConsulta">Id da consulta que terá a situação atualizada</param>
+            <param name="idSituacao">Id da nova situação dessa Consulta</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IEspecialidade.ListarTodos">
+            <summary>
+            Lista todas as Especialidades
+            </summary>
+            <returns>Uma lista com todas as Especialidades</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IEspecialidade.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma Especialidade pelo id
+            </summary>
+            <param name="id">Id da Especialidade que será buscada</param>
+            <returns>Uma Especialidade com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IEspecialidade.Cadastrar(SPMedicalGroup_WebAPI.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova Especialidade
+            </summary>
+            <param name="especialidade">Especialidade que será cadastrada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IEspecialidade.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Especialidade)">
+            <summary>
+            Atualiza uma Especialidade existente
+            </summary>
+            <param name="id">Id da Especialidade que será atualizada</param>
+            <param name="especialidadeAtualizada">Uma Especialidade com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IEspecialidade.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Especialidade existente
+            </summary>
+            <param name="id">Id da Especialidade que será deletada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IMedico.ListarTodos">
+            <summary>
+            Lista todos os Medicos
+            </summary>
+            <returns>Uma lista com todos os Medicos</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IMedico.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Medico pelo id
+            </summary>
+            <param name="id">Id do Medico que será buscado</param>
+            <returns>Um Medico com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IMedico.Cadastrar(SPMedicalGroup_WebAPI.ViewModels.UsuarioMedicoVM)">
+            <summary>
+            Cadastra um novo Medico
+            </summary>
+            <param name="um">Medico que será cadastrado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IMedico.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Medico)">
+            <summary>
+            Atualiza um Medico existente
+            </summary>
+            <param name="id">Id do Medico que será atualizado</param>
+            <param name="medicoAtualizado">Um Medico com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IMedico.Deletar(System.Int32)">
+            <summary>
+            Deleta um Medico existente
+            </summary>
+            <param name="id">Id do Medico que será deletado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IPaciente.ListarTodos">
+            <summary>
+            Lista todos os Pacientes
+            </summary>
+            <returns>Uma lista com todos os Pacientes</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IPaciente.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Paciente pelo id
+            </summary>
+            <param name="id">Id do Paciente que será buscado</param>
+            <returns>Um Paciente com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IPaciente.Cadastrar(SPMedicalGroup_WebAPI.ViewModels.UsuarioPacienteVM)">
+            <summary>
+            Cadastra um novo Paciente
+            </summary>
+            <param name="up">Paciente que será cadastrado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IPaciente.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Paciente)">
+            <summary>
+            Atualiza um Paciente existente
+            </summary>
+            <param name="id">Id do Paciente que será atualizado</param>
+            <param name="pacienteAtualizado">Um Paciente com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IPaciente.Deletar(System.Int32)">
+            <summary>
+            Deleta um Paciente existente
+            </summary>
+            <param name="id">Id do Paciente que será deletado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ISituacao.ListarTodos">
+            <summary>
+            Lista todas as Situacoes
+            </summary>
+            <returns>Uma lista com todas as Situacoes</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ISituacao.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma Situacao pelo id
+            </summary>
+            <param name="id">Id da Situacao que será buscada</param>
+            <returns>Uma Situacao com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ISituacao.Cadastrar(SPMedicalGroup_WebAPI.Domains.Situacao)">
+            <summary>
+            Cadastra uma nova Situacao
+            </summary>
+            <param name="situacao">Situacao que será cadastrada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ISituacao.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Situacao)">
+            <summary>
+            Atualiza uma Situacao existente
+            </summary>
+            <param name="id">Id da Situacao que será atualizada</param>
+            <param name="situacaoAtualizada">Uma Situacao com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ISituacao.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Situacao existente
+            </summary>
+            <param name="id">Id da Situacao que será deletada</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ITiposUsuario.ListarTodos">
+            <summary>
+            Lista todos os TiposUsuarios
+            </summary>
+            <returns>Uma lista com todos os TiposUsuarios</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ITiposUsuario.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um TipoUsuario pelo id
+            </summary>
+            <param name="id">Id do TipoUsuario que será buscado</param>
+            <returns>Um TipoUsuario com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ITiposUsuario.Cadastrar(SPMedicalGroup_WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Cadastra um novo TipoUsuario
+            </summary>
+            <param name="tipoUsuario">TipoUsuario que será cadastrado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ITiposUsuario.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um TipoUsuario existente
+            </summary>
+            <param name="id">Id do TipoUsuario que será atualizado</param>
+            <param name="tipoUsuarioAtualizado">Um TipoUsuario com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.ITiposUsuario.Deletar(System.Int32)">
+            <summary>
+            Deleta um TipoUsuario existente
+            </summary>
+            <param name="id">Id do TipoUsuario que será deletado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.ListarTodos">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Uma lista com todos os Usuarios</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Usuario pelo id
+            </summary>
+            <param name="id">Id do Usuario que será buscado</param>
+            <returns>Um Usuario com suas informações</returns>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.Cadastrar(SPMedicalGroup_WebAPI.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="usuario">Usuario que será cadastrado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.Atualizar(System.Int32,SPMedicalGroup_WebAPI.Domains.Usuario)">
+            <summary>
+            Atualiza um Usuario existente
+            </summary>
+            <param name="id">Id do Usuario que será atualizado</param>
+            <param name="usuarioAtualizado">Um Usuario com as novas informações</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.Deletar(System.Int32)">
+            <summary>
+            Deleta um Usuario existente
+            </summary>
+            <param name="id">Id do Usuario que será deletado</param>
+        </member>
+        <member name="M:SPMedicalGroup_WebAPI.Interfaces.IUsuario.Login(System.String,System.String)">
+            <summary>
+            Valida um Usuario de acordo com o e-mail e senha
+            </summary>
+            <param name="email">E-mail do Usuario que deseja fazer o Login</param>
+            <param name="senha">Senha do Usuario que deseja fazer o Login</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

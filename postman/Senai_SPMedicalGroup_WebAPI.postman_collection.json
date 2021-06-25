@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "afd2dd5c-368f-4d79-9df0-888064021af4",
+		"name": "Senai_SPMedicalGroup_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultas",
+			"item": [
+				{
+					"name": "Consultas.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUwNzM3NywiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.tG3l6fpGjed8ZsG4VUkeZR9DI3yB6u08M3l2PcxbNDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.Minhas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzIiwiZW1haWwiOiJhbGV4YW5kcmVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiMiIsInJvbGUiOiIyIiwiZXhwIjoxNjIzMzYxMTE2LCJpc3MiOiJTUE1lZGljYWxHcm91cCIsImF1ZCI6IlNQTWVkaWNhbEdyb3VwIn0.Txuk2B6_H4ZtWsQ8nyvbs6DLdn5TBN4Ipklcv1jm0ys",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/minhas-consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"minhas-consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.AtualizarSituacao",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/6/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"6",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.AtualizarDescricao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxMSIsImVtYWlsIjoiaGVsZW5hLnNvdXphQHNwbWVkaWNhbGdyb3VwLmNvbS5iciIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjMiLCJyb2xlIjoiMyIsImV4cCI6MTYyMzQ0NDg0OSwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.QG3ynoHOhqXYN__ZIOMyTg7O9gJcUE0MqPDPcipsONg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Tratamento iniciado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUxNjIxOCwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.zvS2JN2L7Lt5tFaE1PYPk7rL-J-2-TIjrbnrVrZ-Nbk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPaciente\": 8,\r\n    \"idMedico\": 4,\r\n    \"dataAgendamento\": \"2021-06-12 14:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MjAyMjQwMjAsImlzcyI6IlNQTWVkaWNhbEdyb3VwIiwiYXVkIjoiU1BNZWRpY2FsR3JvdXAifQ.quMkzAotW9J89g1-Sy7hmgEn5-Ej71SSmfGuhQTYKLs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adm@adm.com\",\r\n    \"senha\": \"adm123\"\r\n\r\n    // \"email\": \"alexandre@gmail.com\",\r\n    // \"senha\": \"alexandre123\"\r\n\r\n    // \"email\": \"helena.souza@spmedicalgroup.com.br\",\r\n    // \"senha\": \"helenastrada123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usarios",
+			"item": [
+				{
+					"name": "Usuarios.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzQxNzA4MCwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.J2DJi4Z55VOwfRa8pv3noMyX_0qd2AwmT2gHFhYWomk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MjAyMjA3MzQsImlzcyI6IlNQTWVkaWNhbEdyb3VwIiwiYXVkIjoiU1BNZWRpY2FsR3JvdXAifQ.vgenFn9qKdkjbWrxwu3p4CQoxuqw6D-8GKSSONPfhso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoUsuario\": 2,\r\n    \"email\": \"vini@gmail.com\",\r\n    \"senha\": \"vini123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clínicas",
+			"item": [
+				{
+					"name": "Clinicas.ListarTodas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MjAyMjA3MzQsImlzcyI6IlNQTWVkaWNhbEdyb3VwIiwiYXVkIjoiU1BNZWRpY2FsR3JvdXAifQ.vgenFn9qKdkjbWrxwu3p4CQoxuqw6D-8GKSSONPfhso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clinicas.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJleHAiOjE2MjAyMjIzMTIsImlzcyI6IlNQTWVkaWNhbEdyb3VwIiwiYXVkIjoiU1BNZWRpY2FsR3JvdXAifQ.A9-uoNngvOHbiDp_srLsCcRKSYuGPIGDV6KbKqji4Io",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Arkham Asylum\",\r\n    \"cnpj\": \"46500902000015\",\r\n    \"razaoSocial\": \"SP Medical Group\",\r\n    \"horarioAbertura\": \"06:00:00\",\r\n    \"horarioFechamento\": \"22:00:00\",\r\n    \"endereco\": \"Arkham Island, 1, Gotham City, NJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clinicas.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Pacientes.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUwNzM3NywiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.tG3l6fpGjed8ZsG4VUkeZR9DI3yB6u08M3l2PcxbNDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacientes.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoUsuario\": 2,\r\n    \"email\": \"vini@gmail.com\",\r\n    \"senha\": \"vini123\",\r\n    \"nome\": \"Vinícius\",\r\n    \"dataNascimento\": \"1999-07-13\",\r\n    \"telefone\": \"901010202\",\r\n    \"rg\": \"545662149\",\r\n    \"cpf\": \"12399299146\",\r\n    \"cep\": \"04409750\",\r\n    \"endereco\": \"Av. Paulista, 1 - Bela Vista, São Paulo - SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Médicos",
+			"item": [
+				{
+					"name": "Medicos.ListaTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUxMjE0MiwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.amR3JZeiqBgkidzfNiABQuTUXR87oxj_Zta8fxPqlKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Medicos.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoUsuario\": 3,\r\n    \"email\": \"vini@hotmail.com\",\r\n    \"senha\": \"vini123\",\r\n    \"idClinica\": 1,\r\n    \"idEspecialidade\": 4,\r\n    \"nome\": \"Vinícius Figueiroa\",\r\n    \"crm\": \"12345\",\r\n    \"estado\": \"SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidades",
+			"item": [
+				{
+					"name": "Especialidades.ListarTodas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUxMjE0MiwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.amR3JZeiqBgkidzfNiABQuTUXR87oxj_Zta8fxPqlKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Especialidades.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxIiwiZW1haWwiOiJhZG1AYWRtLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyMzUxMjE0MiwiaXNzIjoiU1BNZWRpY2FsR3JvdXAiLCJhdWQiOiJTUE1lZGljYWxHcm91cCJ9.amR3JZeiqBgkidzfNiABQuTUXR87oxj_Zta8fxPqlKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Ginecologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
