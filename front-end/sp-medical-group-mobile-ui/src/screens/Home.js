@@ -9,41 +9,47 @@ import {
 } from "react-native";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
 
-export function Appointments() {
-  const consulta = [
-    {
-      id: "1",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Ricardo Lemos",
-      specialty: "Anestesiologia",
-      time: "15:00",
-      status: "Realizada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Roberto Possarle",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Agendada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Possarle",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Cancelada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Robertão",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Agendada",
-    },
-  ];
+const consultas = [
+  {
+    id: "1",
+    date: "Quarta-feira, 20 de Janeiro",
+    doctor: "Ricardo Lemos",
+    specialty: "Anestesiologia",
+    time: "15:00",
+    status: "Realizada",
+  },
+  {
+    id: "2",
+    date: "Quarta-feira, 20 de Janeiro",
+    doctor: "Roberto Possarle",
+    specialty: "Psiquiatria",
+    time: "15:00",
+    status: "Agendada",
+  },
+  {
+    id: "2",
+    date: "Quarta-feira, 20 de Janeiro",
+    doctor: "Possarle",
+    specialty: "Psiquiatria",
+    time: "15:00",
+    status: "Cancelada",
+  },
+  {
+    id: "2",
+    date: "Quarta-feira, 20 de Janeiro",
+    doctor: "Robertão",
+    specialty: "Psiquiatria",
+    time: "15:00",
+    status: "Agendada",
+  },
+];
+
+const scheduled = consultas.filter(
+  (consulta) => consulta.status === "Agendada"
+);
+
+export function Home() {
+  console.log(scheduled);
 
   function refresh() {
     console.warn("Olá");
@@ -90,15 +96,17 @@ export function Appointments() {
     <View style={styles.container}>
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Histórico de consultas</Text>
+          <Text style={styles.title}>Olá, Doutor(a) Vinícius!</Text>
           <TouchableOpacity onPress={refresh}>
             <Feather name="refresh-ccw" size={24} color="#878787" />
           </TouchableOpacity>
         </View>
 
+        <Text style={styles.subtitle}>Consultas agendadas</Text>
+
         <ScrollView style={styles.projectsList}>
           <FlatList
-            data={consulta}
+            data={scheduled}
             keyExtractor={(item) => item.id}
             renderItem={renderItem}
           />
@@ -125,12 +133,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingTop: 38,
-    paddingBottom: 24,
+    paddingBottom: 32,
   },
 
   title: {
     fontSize: 30,
     color: "#215A58",
+  },
+
+  subtitle: {
+    fontSize: 24,
+    color: "#007FA3",
+    marginBottom: 24,
   },
 
   card: {
