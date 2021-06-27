@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
+import { useAuth } from "../hooks/useAuth";
 
 const consultas = [
   {
@@ -49,7 +50,7 @@ const scheduled = consultas.filter(
 );
 
 export function Home() {
-  console.log(scheduled);
+  const { userAuthenticated } = useAuth();
 
   function refresh() {
     console.warn("Olá");
@@ -96,7 +97,9 @@ export function Home() {
     <View style={styles.container}>
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Olá, Doutor(a) Vinícius!</Text>
+          <Text style={styles.title}>
+            Olá, Doutor(a) Vinícius! {userAuthenticated.email}
+          </Text>
           <TouchableOpacity onPress={refresh}>
             <Feather name="refresh-ccw" size={24} color="#878787" />
           </TouchableOpacity>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,8 +8,18 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Logo from "../assets/Logo";
+import { useAuth } from "../hooks/useAuth";
 
 export function Login({ navigation }) {
+  const { signIn } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function handleSignIn() {
+    await signIn(email, password);
+    navigation.navigate("Navigation");
+  }
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -25,7 +35,7 @@ export function Login({ navigation }) {
             <TextInput
               style={styles.formInput}
               keyboardType="email-address"
-              // onChangeText={(email) => setEmail(email)}
+              onChangeText={(email) => setEmail(email)}
             />
           </View>
 
@@ -34,14 +44,11 @@ export function Login({ navigation }) {
             <TextInput
               style={styles.formInput}
               secureTextEntry={true}
-              // onChangeText={(pwd) => setPwd(pwd)}
+              onChangeText={(password) => setPassword(password)}
             />
           </View>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate("Navigation")}
-          >
+          <TouchableOpacity style={styles.button} onPress={handleSignIn}>
             <Text style={styles.buttonText}>Entrar</Text>
           </TouchableOpacity>
         </View>

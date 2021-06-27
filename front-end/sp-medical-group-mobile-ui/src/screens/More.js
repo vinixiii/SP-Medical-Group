@@ -1,11 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useAuth } from "../hooks/useAuth";
 
 export function More({ navigation }) {
-  function signOut() {
+  const { setUserAuthenticated } = useAuth();
+
+  async function signOut() {
+    await setUserAuthenticated({});
     navigation.navigate("Login");
-    console.log("Olá");
   }
 
   return (
