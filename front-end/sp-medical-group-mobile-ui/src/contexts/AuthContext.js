@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwtDecode from "jwt-decode";
 
 export const AuthContext = createContext({});
@@ -9,29 +10,27 @@ export function AuthContextProvider(props) {
 
   async function signIn(email, password) {
     try {
-      if (email.trim() === "" || password.trim() === "") {
-        return;
-      }
-
       const res = await axios.post("http://localhost:5000/api/login", {
         email: email,
         senha: password,
       });
 
-      const token = res.data.token;
+      await AsyncStorage.setItem("token", res.data.token);
+      const tokenDecrypted = jwtDecode(res.data.token);
 
-      const tokenValue = jwtDecode(token);
-
-      setUserAuthenticated(tokenValue);
+      setUserAuthenticated(tokenDecrypted);
     } catch (error) {
       console.warn(error);
     }
   }
 
+  async function signOut() {
+    await AsyncStorage.removeItem("token");
+    setUserAuthenticated({});
+  }
+
   return (
-    <AuthContext.Provider
-      value={{ signIn, userAuthenticated, setUserAuthenticated }}
-    >
+    <AuthContext.Provider value={{ signIn, signOut, userAuthenticated }}>
       {props.children}
     </AuthContext.Provider>
   );

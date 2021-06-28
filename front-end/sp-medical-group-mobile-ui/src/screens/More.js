@@ -4,10 +4,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { useAuth } from "../hooks/useAuth";
 
 export function More({ navigation }) {
-  const { setUserAuthenticated } = useAuth();
+  const { signOut } = useAuth();
 
-  async function signOut() {
-    await setUserAuthenticated({});
+  async function handleSignOut() {
+    await signOut();
     navigation.navigate("Login");
   }
 
@@ -16,7 +16,7 @@ export function More({ navigation }) {
       <View style={styles.main}>
         <Text style={styles.title}>Mais</Text>
 
-        <TouchableOpacity style={styles.screen} onPress={signOut}>
+        <TouchableOpacity style={styles.screen} onPress={handleSignOut}>
           <View style={styles.screenContent}>
             <MaterialIcons name="logout" size={24} color="#878787" />
             <Text style={styles.screenText}>Sair</Text>

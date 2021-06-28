@@ -12,10 +12,14 @@ import { useAuth } from "../hooks/useAuth";
 
 export function Login({ navigation }) {
   const { signIn } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("alexandre@gmail.com");
+  const [password, setPassword] = useState("alexandre123");
 
   async function handleSignIn() {
+    if (email.trim() === "" || password.trim() === "") {
+      return;
+    }
+
     await signIn(email, password);
     navigation.navigate("Navigation");
   }
@@ -33,6 +37,7 @@ export function Login({ navigation }) {
           <View style={styles.formField}>
             <Text style={styles.formLabel}>E-mail</Text>
             <TextInput
+              value={email}
               style={styles.formInput}
               keyboardType="email-address"
               onChangeText={(email) => setEmail(email)}
@@ -42,6 +47,7 @@ export function Login({ navigation }) {
           <View style={styles.formField}>
             <Text style={styles.formLabel}>Senha</Text>
             <TextInput
+              value={password}
               style={styles.formInput}
               secureTextEntry={true}
               onChangeText={(password) => setPassword(password)}

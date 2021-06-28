@@ -1,28 +1,34 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Feather, FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { useAuth } from "../hooks/useAuth";
 
 export function Header() {
-  const role = "2";
+  const { userAuthenticated } = useAuth();
 
   return (
     <View style={styles.header}>
       <View style={styles.content}>
-        <Text style={styles.title}>Paciente</Text>
-        {role === "2" ? (
-          <FontAwesome5
-            style={styles.headerImg}
-            name="user-plus"
-            size={24}
-            color="#3E4954"
-          />
+        {userAuthenticated === "2" ? (
+          <>
+            <Text style={styles.title}>{userAuthenticated.email}</Text>
+            <FontAwesome5
+              style={styles.headerImg}
+              name="user-plus"
+              size={24}
+              color="#3E4954"
+            />
+          </>
         ) : (
-          <FontAwesome5
-            style={styles.headerImg}
-            name="user-md"
-            size={24}
-            color="#3E4954"
-          />
+          <>
+            <Text style={styles.title}>{userAuthenticated.email}</Text>
+            <FontAwesome5
+              style={styles.headerImg}
+              name="user-md"
+              size={24}
+              color="#3E4954"
+            />
+          </>
         )}
       </View>
     </View>

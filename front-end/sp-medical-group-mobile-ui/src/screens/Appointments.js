@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -6,82 +6,129 @@ import {
   ScrollView,
   FlatList,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
+import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFormattedDate } from "../hooks/useFormattedDate";
+import { useAuth } from "../hooks/useAuth";
 
 export function Appointments() {
-  const consulta = [
-    {
-      id: "1",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Ricardo Lemos",
-      specialty: "Anestesiologia",
-      time: "15:00",
-      status: "Realizada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Roberto Possarle",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Agendada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Possarle",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Cancelada",
-    },
-    {
-      id: "2",
-      date: "Quarta-feira, 20 de Janeiro",
-      doctor: "Robertão",
-      specialty: "Psiquiatria",
-      time: "15:00",
-      status: "Agendada",
-    },
-  ];
+  const { userAuthenticated } = useAuth();
+  const [appointmentsList, setAppointmentsList] = useState([]);
+
+  async function getAppointmentsList() {
+    try {
+      const token = await AsyncStorage.getItem("token");
+
+      const res = await axios(
+        "http://localhost:5000/api/consultas/minhas-consultas",
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
+
+      const data = res.data.map((item) => {
+        const date = new Date(item.dataAgendamento);
+        const formattedDate = useFormattedDate(date);
+        return { ...item, dataAgendamento: formattedDate };
+      });
+
+      setAppointmentsList(data);
+
+      // await fetch("http://localhost:5000/api/consultas", {
+      //   headers: {
+      //     Accept: "application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => console.warn(data));
+
+      // await fetch("https://dog.ceo/api/breeds/image/random")
+      //   .then((res) => res.json())
+      //   .then((data) => console.warn(data.message));
+    } catch (error) {
+      console.warn(error);
+    }
+  }
+
+  useEffect(() => {
+    getAppointmentsList();
+  }, []);
 
   function refresh() {
-    console.warn("Olá");
+    getAppointmentsList();
   }
 
   const renderItem = ({ item }) => (
     <View style={styles.card}>
-      <Text style={styles.cardTitle}>{item.date}</Text>
-      <View style={styles.cardRow}>
-        <FontAwesome5 name="user-md" size={24} color="#3E4954" />
-        <Text style={styles.cardInfo}>{item.doctor}</Text>
-      </View>
-      <View style={styles.cardRow}>
-        <FontAwesome5 name="stethoscope" size={24} color="#3E4954" />
-        <Text style={styles.cardInfo}>{item.specialty}</Text>
-      </View>
-      <View style={styles.cardRow}>
-        <FontAwesome5 name="clock" size={24} color="#3E4954" />
-        <Text style={styles.cardInfo}>{item.time}</Text>
-      </View>
+      <Text style={styles.cardTitle}>{item.dataAgendamento}</Text>
+      <View style={styles.cardContent}>
+        <View>
+          <View style={styles.cardRow}>
+            {userAuthenticated.role === "2" ? (
+              <>
+                <FontAwesome5 name="user-md" size={24} color="#3E4954" />
+                <Text style={styles.cardInfo}>
+                  {item.idMedicoNavigation.nome}
+                </Text>
+              </>
+            ) : (
+              <>
+                <FontAwesome5 name="user-plus" size={24} color="#3E4954" />
+                <Text style={styles.cardInfo}>
+                  {item.idPacienteNavigation.nome}
+                </Text>
+              </>
+            )}
+          </View>
+          {userAuthenticated.role === "2" && (
+            <View style={styles.cardRow}>
+              <FontAwesome5 name="stethoscope" size={24} color="#3E4954" />
+              <Text style={styles.cardInfo}>
+                {item.idMedicoNavigation.idEspecialidadeNavigation.titulo}
+              </Text>
+            </View>
+          )}
+          <View style={styles.cardRow}>
+            <FontAwesome5 name="clock" size={24} color="#3E4954" />
+            <Text style={styles.cardInfo}>
+              {new Date(item.dataAgendamento).toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </Text>
+          </View>
 
-      <View
-        style={
-          (item.status === "Realizada" && styles.done) ||
-          (item.status === "Agendada" && styles.scheduled) ||
-          (item.status === "Cancelada" && styles.canceled)
-        }
-      >
-        {/* {item.status} */}
-        <Text
-          style={
-            (item.status === "Realizada" && styles.doneText) ||
-            (item.status === "Agendada" && styles.scheduledText) ||
-            (item.status === "Cancelada" && styles.canceledText)
-          }
-        >
-          {item.status}
-        </Text>
+          <View
+            style={
+              (item.idSituacaoNavigation.titulo === "Realizada" &&
+                styles.done) ||
+              (item.idSituacaoNavigation.titulo === "Agendada" &&
+                styles.scheduled) ||
+              (item.idSituacaoNavigation.titulo === "Cancelada" &&
+                styles.canceled)
+            }
+          >
+            <Text
+              style={
+                (item.idSituacaoNavigation.titulo === "Realizada" &&
+                  styles.doneText) ||
+                (item.idSituacaoNavigation.titulo === "Agendada" &&
+                  styles.scheduledText) ||
+                (item.idSituacaoNavigation.titulo === "Cancelada" &&
+                  styles.canceledText)
+              }
+            >
+              {item.idSituacaoNavigation.titulo}
+            </Text>
+          </View>
+        </View>
+        <FontAwesome5 name="notes-medical" size={128} color={"#f1f1f1"} />
       </View>
     </View>
   );
@@ -92,14 +139,20 @@ export function Appointments() {
         <View style={styles.top}>
           <Text style={styles.title}>Histórico de consultas</Text>
           <TouchableOpacity onPress={refresh}>
-            <Feather name="refresh-ccw" size={24} color="#878787" />
+            <Feather name="refresh-ccw" size={18} color="#878787" />
           </TouchableOpacity>
         </View>
 
         <ScrollView style={styles.projectsList}>
+          <Image
+            style={styles.image}
+            source={{
+              uri: "https://images.dog.ceo/breeds/spaniel-japanese/n02085782_2074.jpg",
+            }}
+          />
           <FlatList
-            data={consulta}
-            keyExtractor={(item) => item.id}
+            data={appointmentsList}
+            keyExtractor={(item) => item.idConsulta.toString()}
             renderItem={renderItem}
           />
         </ScrollView>
@@ -109,6 +162,10 @@ export function Appointments() {
 }
 
 const styles = StyleSheet.create({
+  image: {
+    width: 100,
+  },
+
   container: {
     flex: 1,
     backgroundColor: "#F3F5F5",
@@ -129,7 +186,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 30,
+    fontSize: 28,
     color: "#215A58",
   },
 
@@ -154,6 +211,12 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 22,
     color: "#3F3D56",
+  },
+
+  cardContent: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "space-between",
   },
 
   cardRow: {
