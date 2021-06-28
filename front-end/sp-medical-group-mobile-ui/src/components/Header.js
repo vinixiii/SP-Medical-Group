@@ -9,9 +9,9 @@ export function Header() {
   return (
     <View style={styles.header}>
       <View style={styles.content}>
-        {userAuthenticated === "2" ? (
+        {(userAuthenticated.role === "2" && (
           <>
-            <Text style={styles.title}>{userAuthenticated.email}</Text>
+            <Text style={styles.title}>{userAuthenticated.nomePaciente}</Text>
             <FontAwesome5
               style={styles.headerImg}
               name="user-plus"
@@ -19,17 +19,18 @@ export function Header() {
               color="#3E4954"
             />
           </>
-        ) : (
-          <>
-            <Text style={styles.title}>{userAuthenticated.email}</Text>
-            <FontAwesome5
-              style={styles.headerImg}
-              name="user-md"
-              size={24}
-              color="#3E4954"
-            />
-          </>
-        )}
+        )) ||
+          (userAuthenticated.role === "3" && (
+            <>
+              <Text style={styles.title}>{userAuthenticated.nomeMedico}</Text>
+              <FontAwesome5
+                style={styles.headerImg}
+                name="user-md"
+                size={24}
+                color="#3E4954"
+              />
+            </>
+          ))}
       </View>
     </View>
   );

@@ -31,11 +31,7 @@ export function Appointments() {
         }
       );
 
-      const data = res.data.map((item) => {
-        const date = new Date(item.dataAgendamento);
-        const formattedDate = useFormattedDate(date);
-        return { ...item, dataAgendamento: formattedDate };
-      });
+      const data = res.data;
 
       setAppointmentsList(data);
 
@@ -57,16 +53,22 @@ export function Appointments() {
   }
 
   useEffect(() => {
-    getAppointmentsList();
+    if (userAuthenticated.role !== "1") {
+      getAppointmentsList();
+    }
   }, []);
 
   function refresh() {
-    getAppointmentsList();
+    if (userAuthenticated.role !== "1") {
+      getAppointmentsList();
+    }
   }
 
   const renderItem = ({ item }) => (
     <View style={styles.card}>
-      <Text style={styles.cardTitle}>{item.dataAgendamento}</Text>
+      <Text style={styles.cardTitle}>
+        {useFormattedDate(new Date(item.dataAgendamento))}
+      </Text>
       <View style={styles.cardContent}>
         <View>
           <View style={styles.cardRow}>
@@ -143,19 +145,15 @@ export function Appointments() {
           </TouchableOpacity>
         </View>
 
-        <ScrollView style={styles.projectsList}>
-          <Image
-            style={styles.image}
-            source={{
-              uri: "https://images.dog.ceo/breeds/spaniel-japanese/n02085782_2074.jpg",
-            }}
-          />
-          <FlatList
-            data={appointmentsList}
-            keyExtractor={(item) => item.idConsulta.toString()}
-            renderItem={renderItem}
-          />
-        </ScrollView>
+        <View style={styles.projectsList}>
+          {userAuthenticated.role !== "1" && (
+            <FlatList
+              data={appointmentsList}
+              keyExtractor={(item) => item.idConsulta.toString()}
+              renderItem={renderItem}
+            />
+          )}
+        </View>
       </View>
     </View>
   );

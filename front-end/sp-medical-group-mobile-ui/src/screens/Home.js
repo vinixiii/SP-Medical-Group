@@ -31,13 +31,9 @@ export function Home() {
         }
       );
 
-      const data = res.data
-        .filter((item) => item.idSituacaoNavigation.titulo === "Agendada")
-        .map((item) => {
-          const date = new Date(item.dataAgendamento);
-          const formattedDate = useFormattedDate(date);
-          return { ...item, dataAgendamento: formattedDate };
-        });
+      const data = res.data.filter(
+        (item) => item.idSituacaoNavigation.titulo === "Agendada"
+      );
 
       setAppointmentsList(data);
     } catch (error) {
@@ -46,16 +42,22 @@ export function Home() {
   }
 
   useEffect(() => {
-    getAppointmentsList();
+    if (userAuthenticated.role !== "1") {
+      getAppointmentsList();
+    }
   }, []);
 
   function refresh() {
-    getAppointmentsList();
+    if (userAuthenticated.role !== "1") {
+      getAppointmentsList();
+    }
   }
 
   const renderItem = ({ item }) => (
     <View style={styles.card}>
-      <Text style={styles.cardTitle}>{item.dataAgendamento}</Text>
+      <Text style={styles.cardTitle}>
+        {useFormattedDate(new Date(item.dataAgendamento))}
+      </Text>
       <View style={styles.cardContent}>
         <View>
           <View style={styles.cardRow}>
@@ -127,7 +129,12 @@ export function Home() {
       <View style={styles.main}>
         <View style={styles.top}>
           <Text style={styles.title}>
-            Olá, Doutor(a) {userAuthenticated.email}!
+            Olá,{" "}
+            {(userAuthenticated.role === "1" && "Admin") ||
+              (userAuthenticated.role === "2" &&
+                userAuthenticated.nomePaciente) ||
+              (userAuthenticated.role === "3" &&
+                "Doutor(a) " + userAuthenticated.nomeMedico)}
           </Text>
           <TouchableOpacity onPress={refresh}>
             <Feather name="refresh-ccw" size={24} color="#878787" />
@@ -136,13 +143,15 @@ export function Home() {
 
         <Text style={styles.subtitle}>Consultas agendadas</Text>
 
-        <ScrollView style={styles.projectsList}>
-          <FlatList
-            data={appointmentsList}
-            keyExtractor={(item) => item.idConsulta.toString()}
-            renderItem={renderItem}
-          />
-        </ScrollView>
+        <View style={styles.projectsList}>
+          {userAuthenticated.role !== "1" && (
+            <FlatList
+              data={appointmentsList}
+              keyExtractor={(item) => item.idConsulta.toString()}
+              renderItem={renderItem}
+            />
+          )}
+        </View>
       </View>
     </View>
   );
