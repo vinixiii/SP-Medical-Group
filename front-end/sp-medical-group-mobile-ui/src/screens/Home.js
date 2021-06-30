@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
   FlatList,
   TouchableOpacity,
 } from "react-native";
@@ -23,7 +22,7 @@ export function Home() {
       const token = await AsyncStorage.getItem("token");
 
       const res = await axios(
-        "http://localhost:5000/api/consultas/minhas-consultas",
+        "http://192.168.0.3:5000/api/consultas/minhas-consultas",
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -137,7 +136,7 @@ export function Home() {
                 "Doutor(a) " + userAuthenticated.nomeMedico)}
           </Text>
           <TouchableOpacity onPress={refresh}>
-            <Feather name="refresh-ccw" size={24} color="#878787" />
+            <Feather name="refresh-ccw" size={22} color="#878787" />
           </TouchableOpacity>
         </View>
 
@@ -149,6 +148,7 @@ export function Home() {
               data={appointmentsList}
               keyExtractor={(item) => item.idConsulta.toString()}
               renderItem={renderItem}
+              ListFooterComponent={<View style={styles.footer}></View>}
             />
           )}
         </View>
@@ -277,5 +277,9 @@ const styles = StyleSheet.create({
   canceledText: {
     fontSize: 18,
     color: "#BE2527",
+  },
+
+  footer: {
+    height: 164,
   },
 });

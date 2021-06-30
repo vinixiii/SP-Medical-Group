@@ -3,10 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
   FlatList,
   TouchableOpacity,
-  Image,
 } from "react-native";
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
 import axios from "axios";
@@ -34,19 +32,6 @@ export function Appointments() {
       const data = res.data;
 
       setAppointmentsList(data);
-
-      // await fetch("http://localhost:5000/api/consultas", {
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => console.warn(data));
-
-      // await fetch("https://dog.ceo/api/breeds/image/random")
-      //   .then((res) => res.json())
-      //   .then((data) => console.warn(data.message));
     } catch (error) {
       console.warn(error);
     }
@@ -141,7 +126,7 @@ export function Appointments() {
         <View style={styles.top}>
           <Text style={styles.title}>Histórico de consultas</Text>
           <TouchableOpacity onPress={refresh}>
-            <Feather name="refresh-ccw" size={18} color="#878787" />
+            <Feather name="refresh-ccw" size={22} color="#878787" />
           </TouchableOpacity>
         </View>
 
@@ -151,6 +136,7 @@ export function Appointments() {
               data={appointmentsList}
               keyExtractor={(item) => item.idConsulta.toString()}
               renderItem={renderItem}
+              ListFooterComponent={<View style={styles.footer}></View>}
             />
           )}
         </View>
@@ -277,5 +263,9 @@ const styles = StyleSheet.create({
   canceledText: {
     fontSize: 18,
     color: "#BE2527",
+  },
+
+  footer: {
+    height: 97,
   },
 });
