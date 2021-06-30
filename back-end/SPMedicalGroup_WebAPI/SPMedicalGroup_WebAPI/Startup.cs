@@ -35,8 +35,8 @@ namespace SPMedicalGroup_WebAPI
                 options.AddPolicy("CorsPolicy", 
                     builder => {
                         builder.WithOrigins("http://localhost:3000", "http://localhost:19006")
-                               .AllowAnyHeader()
-                               .AllowAnyMethod();
+                                                                    .AllowAnyHeader()
+                                                                    .AllowAnyMethod();
                     }
                 );
             });

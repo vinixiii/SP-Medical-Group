@@ -34,7 +34,7 @@ namespace SPMedicalGroup_WebAPI.Controllers
         /// </summary>
         /// <returns>Um status code Ok(200) e uma lista de Consultas</returns>
         [HttpGet]
-        [Authorize(Roles = "1")]
+        // [Authorize(Roles = "1")]
         public IActionResult ListarTodos()
         {
             try

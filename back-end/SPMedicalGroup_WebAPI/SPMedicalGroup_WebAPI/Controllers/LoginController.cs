@@ -44,6 +44,19 @@ namespace SPMedicalGroup_WebAPI.Controllers
                 // Valida o Usuario de acordo com o e-mail e senha
                 Usuario usuarioLogin = _UsuarioRepository.Login(login.Email, login.Senha);
 
+                Paciente pacienteLogin = new Paciente();
+                Medico medicoLogin = new Medico();
+
+                if (usuarioLogin.IdTipoUsuario == 2)
+                {
+                    pacienteLogin = _UsuarioRepository.BuscarPacientePorId(usuarioLogin.IdUsuario);
+                }
+
+                if (usuarioLogin.IdTipoUsuario == 3)
+                {
+                    medicoLogin = _UsuarioRepository.BuscarMedicoPorId(usuarioLogin.IdUsuario);
+                }
+
                 if (usuarioLogin == null)
                 {
                     // Retorna um status code NotFound(400) com uma mensagem de erro personalizada
@@ -57,6 +70,8 @@ namespace SPMedicalGroup_WebAPI.Controllers
                     new Claim(JwtRegisteredClaimNames.Email, usuarioLogin.Email),
                     new Claim(ClaimTypes.Role, usuarioLogin.IdTipoUsuario.ToString()),
                     new Claim("role", usuarioLogin.IdTipoUsuario.ToString()),
+                    new Claim("nomePaciente", usuarioLogin.IdTipoUsuario == 2 ? $"{pacienteLogin.Nome}" : "" ),
+                    new Claim("nomeMedico", usuarioLogin.IdTipoUsuario == 3 ? $"{medicoLogin.Nome}" : "" ),
                 };
 
                 // Define a chave de acesso do Token

@@ -19,6 +19,16 @@ namespace SPMedicalGroup_WebAPI.Repositories
             throw new NotImplementedException();
         }
 
+        public Medico BuscarMedicoPorId(int id)
+        {
+            return ctx.Medicos.FirstOrDefault(m => m.IdUsuario == id);
+        }
+
+        public Paciente BuscarPacientePorId(int id)
+        {
+            return ctx.Pacientes.FirstOrDefault(p => p.IdUsuario == id);
+        }
+
         public Usuario BuscarPorId(int id)
         {
             return ctx.Usuarios.Find(id);

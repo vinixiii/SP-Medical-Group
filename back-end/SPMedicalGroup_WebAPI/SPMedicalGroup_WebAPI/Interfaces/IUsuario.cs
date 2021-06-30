@@ -47,5 +47,19 @@ namespace SPMedicalGroup_WebAPI.Interfaces
         /// <param name="senha">Senha do Usuario que deseja fazer o Login</param>
         /// <returns></returns>
         Usuario Login(string email, string senha);
+
+        /// <summary>
+        /// Busca um Paciente pelo idUsuario
+        /// </summary>
+        /// <param name="id">IdUsuario do Paciente que será buscado</param>
+        /// <returns></returns>
+        Paciente BuscarPacientePorId(int id);
+
+        /// <summary>
+        /// Busca um Medico pelo IdUsuario
+        /// </summary>
+        /// <param name="id">IdUsuario do Medico que será buscado</param>
+        /// <returns></returns>
+        Medico BuscarMedicoPorId(int id);
     }
 }

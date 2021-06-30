@@ -7539,11 +7539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinixiii\\Desktop\\editar tabela\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\vinixiii\\Desktop\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI.csproj",
       "projectName": "SPMedicalGroup_WebAPI",
-      "projectPath": "C:\\Users\\vinixiii\\Desktop\\editar tabela\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI.csproj",
+      "projectPath": "C:\\Users\\vinixiii\\Desktop\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI.csproj",
       "packagesPath": "C:\\Users\\vinixiii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinixiii\\Desktop\\editar tabela\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\vinixiii\\Desktop\\SP-Medical-Group\\back-end\\SPMedicalGroup_WebAPI\\SPMedicalGroup_WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vinixiii\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -22,7 +22,7 @@ export function Home() {
       const token = await AsyncStorage.getItem("token");
 
       const res = await axios(
-        "http://192.168.0.3:5000/api/consultas/minhas-consultas",
+        "http://localhost:5000/api/consultas/minhas-consultas",
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -178,6 +178,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    maxWidth: 256,
     fontSize: 30,
     color: "#215A58",
   },
